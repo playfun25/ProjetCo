@@ -1,7 +1,9 @@
+#include <chrono>
 #include <mbed.h>
 #include <stdio.h>
 
 #include "Callback.h"
+#include "ThisThread.h"
 #include "lorawan/LoRaWANInterface.h"
 #include "lorawan/system/lorawan_data_structures.h"
 #include "events/EventQueue.h"
@@ -68,6 +70,8 @@ static LoRaWANInterface lorawan(radio);
 static lorawan_app_callbacks_t callbacks;
 
 int timeBZ = 0;
+bool connected = false;
+bool frameSent = false;
 
 static void send_message();
 
@@ -125,18 +129,28 @@ int main(void)
 
     printf("\r\n Connection - In Progress ...\r\n");
 
+    do
+    {
+        ev_queue.dispatch_for(std::chrono::milliseconds(1000));
+    } while(connected == false);
+
     // make your event queue dispatching events forever
-    ev_queue.dispatch_for(events::EventQueue::duration(3000));
+    //ev_queue.dispatch_for(events::EventQueue::duration(3000));
 
     while(1)
     {
+        frameSent = false;
         timeBZ = sensor.wakeUp(timeBZ);
         printf("sleep for %d seconds\n", timeBZ);
         ThisThread::sleep_for(chrono::milliseconds(timeBZ));
         printf("reveille\n");
 
         ev_queue.call_in(1, send_message);
-        ev_queue.dispatch_for(events::EventQueue::duration(1000));
+        while(frameSent == false)
+        {
+            ev_queue.dispatch_for(events::EventQueue::duration(100));
+        }
+        //ev_queue.dispatch_for(events::EventQueue::duration(200));
     }
 
     return 0;
@@ -166,6 +180,7 @@ static void send_message()
                 ev_queue.call_in(3000, send_message);
             }
         }
+
         return;
     }
 
@@ -201,18 +216,23 @@ static void lora_event_handler(lorawan_event_t event)
     switch (event) {
         case CONNECTED:
             printf("\r\n Connection - Successful \r\n");
+            connected = true;
             break;
 
         case DISCONNECTED:
             ev_queue.break_dispatch();
             printf("\r\n Deconnecte avec succes \r\n");
+            connected = false;
             break;
 
         case TX_DONE:
             printf("\r\n Le message a ete envoye  \r\n");
+            frameSent = true;
+            /*
             if (MBED_CONF_LORA_DUTY_CYCLE_ON) {
                 send_message();
             }
+            */
             break;
 
         case TX_TIMEOUT:

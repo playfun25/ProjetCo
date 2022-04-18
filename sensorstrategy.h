@@ -1,7 +1,6 @@
 #pragma once
 
 #include "sensorslastvalue.h"
-#include "sensorslastvalue.h"
 
 class SensorStrategy
 {
