@@ -4,7 +4,7 @@
 int tempSensorStrategy::getMesure()
 {
     SensorsLastValue::GetInstance()->setTempValue(1);
-    return 1;
+    return 0;
 }
 
 

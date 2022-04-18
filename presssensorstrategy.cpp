@@ -8,7 +8,7 @@ PressSensorStrategy::PressSensorStrategy()
 int PressSensorStrategy::getMesure()
 {
     SensorsLastValue::GetInstance()->setpressValue(1024);
-    return 1024;
+    return 0;
 }
 
 int PressSensorStrategy::wakeUp()

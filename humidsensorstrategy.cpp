@@ -8,7 +8,7 @@ HumidSensorStrategy::HumidSensorStrategy()
 int HumidSensorStrategy::getMesure()
 {
     SensorsLastValue::GetInstance()->setHumidValue(25);
-   return 25;
+   return 0;
 }
 
 int HumidSensorStrategy::wakeUp()

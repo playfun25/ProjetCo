@@ -8,7 +8,7 @@ LuxSensorStrategy::LuxSensorStrategy()
 int LuxSensorStrategy::getMesure()
 {
     SensorsLastValue::GetInstance()->setLumiValue(10000);
-    return 10000;
+    return 0;
 }
 
 

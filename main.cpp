@@ -75,13 +75,34 @@ bool frameSent = false;
 
 static void send_message();
 
+void printMesure(int type){
+    
+    switch(type){
+        case TEMP_SENSOR:
+        printf("température : %.2f \n",SensorsLastValue::GetInstance()->getTempValue() );
+        break;
+        case HUMID_SENSOR: 
+        printf("Humidité : %.2f \n",SensorsLastValue::GetInstance()->getHumidValue() );
+        break;
+        case PRESS_SENSOR: 
+        printf("Pression : %.2f \n",SensorsLastValue::GetInstance()->getpressValue() );
+        break;
+        case CO2_SENSOR: 
+        printf("Co2 : %.2f \n",SensorsLastValue::GetInstance()->getCO2Value() );
+        break;
+        case LUX_SENSOR:
+        printf("Luminausité : %.2f \n",SensorsLastValue::GetInstance()->getLumiValue() ); 
+        break;
+    }
+}
 /**
  * Entry point for application
  */
 int main(void)
 {
-    printf("MBED c'est de la merde !!!\n");
+    printf("PUTAIN\n");
     SensorManager sensor;
+    int typeCapteur=0;
     
     // Permet d'afficher les traces
     setup_trace();
@@ -140,7 +161,13 @@ int main(void)
     while(1)
     {
         frameSent = false;
-        timeBZ = sensor.wakeUp(timeBZ);
+        typeCapteur =sensor.wakeUp(timeBZ);
+        printf("valeu type %d",typeCapteur);
+        timeBZ = sensor.getNextSleepTime();
+        if(typeCapteur <=0){
+            printf("erreur capteur\n");
+        }
+        printMesure(typeCapteur);
         printf("sleep for %d seconds\n", timeBZ);
         ThisThread::sleep_for(chrono::milliseconds(timeBZ));
         printf("reveille\n");

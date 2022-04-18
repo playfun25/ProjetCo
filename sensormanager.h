@@ -27,12 +27,13 @@ class SensorManager
 public:
     SensorManager();
     int wakeUp(int timePassed);
-
+    int getNextSleepTime(){return nextSleepTime;};
 private:
     std::vector<Sensor*> * sensorVector;
     void sortSensorVector();
     static bool compareTimeLeft(Sensor* i1, Sensor* i2);
     int findTimeLeft();
     void updateTimeLeft(int timePassed);
+    int nextSleepTime;
 };
 
