@@ -4,6 +4,7 @@
 
 SensorManager::SensorManager()
 {
+    int ret =0;
     this->sensorVector = new std::vector<Sensor*>();
 
 
@@ -22,7 +23,11 @@ SensorManager::SensorManager()
 #ifdef LUX_SENSOR
     sensorVector->push_back(new Sensor(PRESS_SENSOR_PERIOD,PRESS_SENSOR,new PRESS_STRATEGIE));
 #endif
-
+    ret += this->initSensors();
+    if(ret){
+        /* exeption
+        */
+    }
     this->sortSensorVector();
 }
 
@@ -33,14 +38,16 @@ int SensorManager::wakeUp(int timePassed)
     if(this->sensorVector->at(0)->getPeriodLeft()<=0){
         /* get mesure
          */
+    if (this->sensorVector->at(0)->wakeUp()) return -1;
     if (this->sensorVector->at(0)->getMesure()) return -1;
+    if (this->sensorVector->at(0)->lowPower()) return -1;
 
         this->sensorVector->at(0)->resetPeriod();
         ret = this->sensorVector->at(0)->getType();
     }else{
         ret = -2;
     }
-
+   
     this->sortSensorVector();
     nextSleepTime = this->sensorVector->at(0)->getPeriodLeft();
     return ret;
@@ -67,6 +74,15 @@ void SensorManager::updateTimeLeft(int timePassed)
         it->decrementPeriod(timePassed);
     }
 
+}
+int SensorManager::initSensors()
+{   
+    int ret = 0;
+    for(Sensor * it : *sensorVector){
+       ret  += it->init();
+       ret  += it->lowPower();
+    }
+    return ret;
 }
 
 void SensorManager::sortSensorVector()

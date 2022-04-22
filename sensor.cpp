@@ -21,6 +21,18 @@ int Sensor::getMesure()
 {
   return this->strategy->getMesure();
 }
+int Sensor::wakeUp()
+{
+  return this->strategy->wakeUp();
+}
+int Sensor::lowPower()
+{
+  return this->strategy->lowPower();
+}
+int Sensor::init()
+{
+  return this->strategy->init();
+}
 
 int Sensor::getType() const
 {

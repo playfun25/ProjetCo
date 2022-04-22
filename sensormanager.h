@@ -35,5 +35,6 @@ private:
     int findTimeLeft();
     void updateTimeLeft(int timePassed);
     int nextSleepTime;
+    int initSensors();
 };
 

@@ -12,6 +12,9 @@ public:
     int getPeriodLeft() const;
     int getMesure();
     int getType() const;
+    int wakeUp();
+    int lowPower();
+    int init();
 
 private:
     int periodLeft;
