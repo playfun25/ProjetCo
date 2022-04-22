@@ -1,6 +1,6 @@
 #include "sensormanager.h"
 
-
+Timer t;//mesur du temps de reveil
 
 SensorManager::SensorManager()
 {
@@ -38,10 +38,21 @@ int SensorManager::wakeUp(int timePassed)
     if(this->sensorVector->at(0)->getPeriodLeft()<=0){
         /* get mesure
          */
+    t.reset();
+    t.start();
     if (this->sensorVector->at(0)->wakeUp()) return -1;
+    t.stop();
+    printf("temps de wake up : %f seconds\n", t.read());
+    t.reset();
+    t.start();
     if (this->sensorVector->at(0)->getMesure()) return -1;
+    t.stop();
+    printf("temps de get mesure : %f seconds\n", t.read());
+     t.reset();
+    t.start();
     if (this->sensorVector->at(0)->lowPower()) return -1;
-
+    t.stop();
+    printf("temps mise en low power : %f seconds\n", t.read());
         this->sensorVector->at(0)->resetPeriod();
         ret = this->sensorVector->at(0)->getType();
     }else{
@@ -78,8 +89,15 @@ void SensorManager::updateTimeLeft(int timePassed)
 int SensorManager::initSensors()
 {   
     int ret = 0;
+    int numsensor =1;
     for(Sensor * it : *sensorVector){
-       ret  += it->init();
+        numsensor++:
+        t.reset();
+         t.start();
+         ret  += it->init();
+         t.stop();
+    printf("temps init capteur:%d : %f seconds\n",numsensor, t.read());
+       
        ret  += it->lowPower();
     }
     return ret;
