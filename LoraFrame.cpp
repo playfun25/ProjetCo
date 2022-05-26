@@ -15,7 +15,6 @@ LoraFrame::~LoraFrame()
 std::vector<uint8_t> LoraFrame::getFrame()
 {
     std::vector<uint8_t> ret;
-
     for(int i = 0; i < data.size(); i+=1)
     {
         ret.push_back(dataType.at(i));
@@ -27,7 +26,6 @@ std::vector<uint8_t> LoraFrame::getFrame()
             ret.push_back(array[j]);
         }
     }
-
     return ret;
 }
 

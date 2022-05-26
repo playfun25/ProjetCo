@@ -3,22 +3,22 @@
 
 int tempSensorStrategy::getMesure()
 {
-    SensorsLastValue::GetInstance()->setTempValue(1);
+    SensorsLastValue::GetInstance()->setTempValue((float)10);
     return 0;
 }
 
 
 int tempSensorStrategy::wakeUp()
 {
-    return 1;
+    return 0;
 }
 
 int tempSensorStrategy::init()
 {
-    return 1;
+    return 0;
 }
 
 int tempSensorStrategy::lowPower()
 {
-    return 1;
+    return 0;
 }

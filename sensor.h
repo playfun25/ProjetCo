@@ -1,7 +1,7 @@
 #pragma once
 #include<cstdint>
 
-#include<sensorstrategy.h>
+#include"sensorstrategy.h"
 
 class Sensor
 {
