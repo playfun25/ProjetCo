@@ -1,15 +1,15 @@
 #pragma once
 #include "mbed.h"
 
-DigitalOut Alim_l1(PA_7);
-DigitalOut Alim_l2(PA_4);
-DigitalOut Alim_l3(PA_9);
+extern DigitalOut  Alim_l1;
+extern DigitalOut  Alim_l2;
+extern DigitalOut  Alim_l3;
 
 #define TEMP_SENSOR_ACTVE
 #define TEMP_SENSOR 0x01
 #define TEMP_SENSOR_PERIOD 2000
 #define TEMP_STRATEGIE tempSensorStrategy()
-//DigitalOut & TEMP_POWER_LINE = Alim_l1;
+//DigitalOut * TEMP_POWER_LINE = Alim_l1;
 
 //#define HUMID_SENSOR_ACTVE
 #define HUMID_SENSOR 0x02

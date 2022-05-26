@@ -1,6 +1,9 @@
 #include "sensormanager.h"
 
 
+DigitalOut  Alim_l1(PA_7);
+DigitalOut  Alim_l2(PA_4);
+DigitalOut  Alim_l3(PA_9);
 
 SensorManager::SensorManager()
 {
