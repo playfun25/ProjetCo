@@ -13,74 +13,67 @@
 #include "events/EventQueue.h"
 #include "sensormanager.h"
 
-// Application helpers
 #include "trace_helper.h"
 #include "lora_radio_helper.hpp"
 #include "LoraFrame.hpp"
 
 using namespace events;
 
-// Max payload size can be LORAMAC_PHY_MAXPAYLOAD.
-// This example only communicates with much shorter messages (<30 bytes).
-// If longer messages are used, these buffers must be changed accordingly.
+// Taille maximum des messages LoRa
 uint8_t tx_buffer[30];
 uint8_t rx_buffer[30];
 
-#define TX_TIMER 10000;
 
-/**
- * Maximum number of events for the event queue.
- * 10 is the safe number for the stack events, however, if application
- * also uses the queue for whatever purposes, this number should be increased.
- */
-#define MAX_NUMBER_OF_EVENTS            10
+//constexpr uint16_t TX_TIMER = 10000;
 
-/**
- * Maximum number of retries for CONFIRMED messages before giving up
- */
-#define CONFIRMED_MSG_RETRY_COUNTER     3
-
-/**
- * Dummy pin for dummy sensor
- */
-#define PC_9                            0
+//
+constexpr uint16_t CONNECTION_TEMPO = 1000;
+constexpr uint16_t SEND_TEMPO = 1000;
 
 
-/**
-* This event queue is the global event queue for both the
-* application and stack. To conserve memory, the stack is designed to run
-* in the same thread as the application and the application is responsible for
-* providing an event queue to the stack that will be used for ISR deferment as
-* well as application information event queuing.
-*/
+// Nombre maximum d'evenement dans la queue
+constexpr uint8_t MAX_NUMBER_OF_EVENTS = 10;
+
+
+ // Nombre maxium d'essai pour la connexion au reseau LoRa
+constexpr uint8_t  CONFIRMED_MSG_RETRY_COUNTER = 3;
+
+
+// Queue d'evenement, doit fonctionner dans le thread principal
 static EventQueue ev_queue(MAX_NUMBER_OF_EVENTS *EVENTS_EVENT_SIZE);
 
-/**
- * Event handler.
- *
- * This will be passed to the LoRaWAN stack to queue events for the
- * application which in turn drive the application.
- */
+
+// Permet de gerer les differents evenement lora
 static void lora_event_handler(lorawan_event_t event);
 
-/**
- * Constructing Mbed LoRaWANInterface and passing it the radio object from lora_radio_helper.
- */
+
+// Construit une interface lora en passant un objet radio depuis le lora_radio_helper
 static LoRaWANInterface lorawan(radio);
 
-/**
- * Application specific callbacks
- */
+// definit le callback de l'application lora
 static lorawan_app_callbacks_t callbacks;
 
-int timeBZ = 0;
-bool connected = false;
+
+// Mis a jour lors de preparation d'un message et d'un envoi effectif
 bool frameSent = false;
+
+
+// Mis a jour lors de la connexion et de la deconnexion
+bool connected = false;
+
+
+int timeBZ = 0; // temporaire temps de dodo pour capteur 
+
+
 
 static void send_message();
 
-void printMesure(int type){
-    
+
+
+
+// Affiche la mesure 
+void printMesure(int type)
+{   
     switch(type){
         case TEMP_SENSOR:
         printf("température : %.2f \n",SensorsLastValue::GetInstance()->getTempValue() );
@@ -99,15 +92,17 @@ void printMesure(int type){
         break;
     }
 }
+
+
+
 /**
- * Entry point for application
+ * Point d'entrée de l'application
  */
 int main(void)
 {
-    printf("PUTAIN\n");
     SensorManager sensor;
     //DigitalOut(sb27);
-    int typeCapteur=0;
+    int typeCapteur = 0;
     
     // Permet d'afficher les traces
     setup_trace();
@@ -146,43 +141,43 @@ int main(void)
 
     retcode = lorawan.connect();
 
-    if (retcode == LORAWAN_STATUS_OK ||
-            retcode == LORAWAN_STATUS_CONNECT_IN_PROGRESS) {
-    } else {
+    if (retcode == LORAWAN_STATUS_OK || retcode == LORAWAN_STATUS_CONNECT_IN_PROGRESS) 
+    {
+
+    } 
+    else 
+    {
         printf("\r\n Connection error, code = %d \r\n", retcode);
         return -1;
     }
 
     printf("\r\n Connection - In Progress ...\r\n");
 
+    // On donne du temps a la queue d'evenement pour qu'elle realise les taches en cours
+    // Tant qu'on est pas connecte
     do
     {
-        ev_queue.dispatch_for(std::chrono::milliseconds(1000));
+        ev_queue.dispatch_for(std::chrono::milliseconds(CONNECTION_TEMPO));
     } while(connected == false);
 
-    // make your event queue dispatching events forever
-    //ev_queue.dispatch_for(events::EventQueue::duration(3000));
 
+    // Boucle du programme principal
     while(1)
     {
         frameSent = false;
-        typeCapteur =sensor.wakeUp(timeBZ);
-        printf("valeu type %d",typeCapteur);
+
+        // On realise la gestion capteur
+        // reveil --> recuperation d'une nouvelle valeur --> repos
+        typeCapteur = sensor.wakeUp(timeBZ);
         timeBZ = sensor.getNextSleepTime();
-        if(typeCapteur <=0){
-            printf("erreur capteur\n");
-        }
         printMesure(typeCapteur);
-        printf("sleep for %d seconds\n", timeBZ);
         ThisThread::sleep_for(chrono::milliseconds(timeBZ));
-        printf("reveille\n");
 
         ev_queue.call_in(1, send_message);
         while(frameSent == false)
         {
-            ev_queue.dispatch_for(events::EventQueue::duration(100));
+            ev_queue.dispatch_for(events::EventQueue::duration(SEND_TEMPO));
         }
-        //ev_queue.dispatch_for(events::EventQueue::duration(200));
     }
 
     return 0;
@@ -199,32 +194,30 @@ static void send_message()
     LoraFrame* frame;
     std::string frameString;
 
+    // Creation de la trame
     frame = new LoraFrame();
+
+    // Ajoute les donnees des capteurs necessaire a la trame 
     frame->addData(TEMP_SENSOR, 10);
+
+    // Recupere la trame sous forme d'une chaine de character
     frameString = std::string(frame->getFrame().begin(), frame->getFrame().end());
+
+    // Recupere la taille de la trame
     packet_len = sprintf((char *) tx_buffer, frameString.c_str());
 
+    // Envoi de la trame
     retcode = lorawan.send(MBED_CONF_LORA_APP_PORT, tx_buffer, packet_len,
                            MSG_UNCONFIRMED_FLAG);
 
-    if (retcode < 0) {
-        retcode == LORAWAN_STATUS_WOULD_BLOCK ? printf("send - WOULD BLOCK\r\n")
-        : printf("\r\n send() - Error code %d \r\n", retcode);
-
-        if (retcode == LORAWAN_STATUS_WOULD_BLOCK) {
-            //retry in 3 seconds
-            if (MBED_CONF_LORA_DUTY_CYCLE_ON) {
-                ev_queue.call_in(3000, send_message);
-            }
-        }
-
-        return;
-    }
-
-    printf("\r\n %d bytes scheduled for transmission \r\n", retcode);
+    printf("\r\n %d bytes preparé à être transmis \r\n", retcode);
     memset(tx_buffer, 0, sizeof(tx_buffer));
 }
 
+
+/**
+ * Methode appelé lors de la reception d'un message 
+ */
 static void receive_message()
 {
     uint8_t port;
@@ -244,6 +237,8 @@ static void receive_message()
 
     memset(rx_buffer, 0, sizeof(rx_buffer));
 }
+
+
 
 /**
  * Event handler
@@ -265,11 +260,6 @@ static void lora_event_handler(lorawan_event_t event)
         case TX_DONE:
             printf("\r\n Le message a ete envoye  \r\n");
             frameSent = true;
-            /*
-            if (MBED_CONF_LORA_DUTY_CYCLE_ON) {
-                send_message();
-            }
-            */
             break;
 
         case TX_TIMEOUT:
@@ -278,10 +268,6 @@ static void lora_event_handler(lorawan_event_t event)
 
         case TX_SCHEDULING_ERROR:
             printf("\r\n Erreur de transmission - EventCode = %d \r\n", event);
-            // try again
-            if (MBED_CONF_LORA_DUTY_CYCLE_ON) {
-                send_message();
-            }
             break;
 
         case RX_DONE:
@@ -301,13 +287,8 @@ static void lora_event_handler(lorawan_event_t event)
             
         case UPLINK_REQUIRED:
             printf("\r\n Uplink required by NS \r\n");
-            if (MBED_CONF_LORA_DUTY_CYCLE_ON) {
-                send_message();
-            }
             break;
         default:
             MBED_ASSERT("Unknown Event");
     }
 }
-
-// EOF
