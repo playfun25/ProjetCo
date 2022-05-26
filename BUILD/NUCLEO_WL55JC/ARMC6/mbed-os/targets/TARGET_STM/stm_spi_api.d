@@ -7,9 +7,8 @@ BUILD/NUCLEO_WL55JC/ARMC6/mbed-os/targets/TARGET_STM/stm_spi_api.o: \
   mbed-os/platform/include/platform/mbed_error.h \
   mbed-os/platform/include/platform/mbed_retarget.h \
   mbed-os/platform/include/platform/mbed_debug.h \
-  mbed-os/platform/include/platform/mbed_critical.h \
-  mbed-os/platform/include/platform/mbed_wait_api.h \
-  mbed-os/platform/include/platform/mbed_atomic.h \
+  mbed-os/hal/include/hal/spi_api.h mbed-os/targets/TARGET_STM/device.h \
+  mbed-os/targets/TARGET_STM/TARGET_STM32WL/objects.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/cmsis.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/CMSIS/stm32wlxx.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/CMSIS/stm32wl55xx.h \
@@ -65,7 +64,6 @@ BUILD/NUCLEO_WL55JC/ARMC6/mbed-os/targets/TARGET_STM/stm_spi_api.o: \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_smartcard.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_smartcard_ex.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_smbus.h \
-  mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_smbus_ex.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_spi.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_spi_ex.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_subghz.h \
@@ -79,9 +77,6 @@ BUILD/NUCLEO_WL55JC/ARMC6/mbed-os/targets/TARGET_STM/stm_spi_api.o: \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_wwdg.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_ll_system.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/TARGET_STM32WL55xC/cmsis_nvic.h \
-  mbed-os/platform/include/platform/internal/mbed_atomic_impl.h \
-  mbed-os/targets/TARGET_STM/device.h \
-  mbed-os/targets/TARGET_STM/TARGET_STM32WL/objects.h \
   mbed-os/targets/TARGET_STM/PortNames.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/PeripheralNames.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/TARGET_STM32WL55xC/TARGET_NUCLEO_WL55JC/PinNames.h \
@@ -94,7 +89,7 @@ BUILD/NUCLEO_WL55JC/ARMC6/mbed-os/targets/TARGET_STM/stm_spi_api.o: \
   mbed-os/targets/TARGET_STM/us_ticker_defines.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/us_ticker_data.h \
   mbed-os/targets/TARGET_STM/lp_ticker_defines.h \
-  mbed-os/hal/include/hal/spi_api.h mbed-os/hal/include/hal/pinmap.h \
-  mbed-os/hal/include/hal/dma_api.h mbed-os/hal/include/hal/buffer.h \
+  mbed-os/hal/include/hal/pinmap.h mbed-os/hal/include/hal/dma_api.h \
+  mbed-os/hal/include/hal/buffer.h \
   mbed-os/targets/TARGET_STM/PeripheralPins.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/spi_device.h

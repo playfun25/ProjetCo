@@ -1,4 +1,6 @@
-#include "LoraFrame.h"
+#include "LoraFrame.hpp"
+#include <vector>
+#include <bitset>
 
 LoraFrame::LoraFrame()
 {
@@ -10,44 +12,27 @@ LoraFrame::~LoraFrame()
 
 }
 
-uint8_t* LoraFrame::getFrame() const noexcept
+std::vector<uint8_t> LoraFrame::getFrame()
 {
-    uint8_t* ret;
+    std::vector<uint8_t> ret;
 
-    for(int i = 0; i < dataType.size(); i+=2)
+    for(int i = 0; i < data.size(); i+=1)
     {
-        ret[i] = getDataType(dataType.at(i));
-        ret[i+1] = data.at(i);
-    }
+        ret.push_back(dataType.at(i));
 
+        uint8_t *array = reinterpret_cast<uint8_t*>((float*)&data.at(i));
+
+        for(int j = 0; j < sizeof(float); j++)
+        {
+            ret.push_back(array[j]);
+        }
+    }
 
     return ret;
 }
 
-void LoraFrame::addData(FrameDataType dataType, uint8_t *data)
+void LoraFrame::addData(const uint8_t& dataType, const float& data)
 {
     this->dataType.push_back(dataType);
-    this->data.push_back(*data);
-}
-
-uint8_t LoraFrame::getDataType(FrameDataType dataType) const noexcept
-{
-    uint8_t ret;
-
-    switch(dataType)
-    {
-        case FrameDataType::hydrometrie:
-            ret = HYDROMETRIE;
-            break;
-        case FrameDataType::temperature:
-            ret = TEMPERATURE;
-            break;
-        case FrameDataType::luminosite:
-            ret = LUMINOSITE;
-            break;
-        default:
-            ret = 0x00;
-    }
-
-    return ret;
+    this->data.push_back(data);
 }

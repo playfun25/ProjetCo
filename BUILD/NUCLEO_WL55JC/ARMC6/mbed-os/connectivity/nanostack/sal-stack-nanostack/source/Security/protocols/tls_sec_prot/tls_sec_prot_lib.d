@@ -15,11 +15,8 @@ BUILD/NUCLEO_WL55JC/ARMC6/mbed-os/connectivity/nanostack/sal-stack-nanostack/sou
   mbed-os/connectivity/nanostack/sal-stack-nanostack/source/configs/base/cfg_lowpan_host.h \
   mbed-os/connectivity/nanostack/sal-stack-nanostack/source/configs/base/cfg_local_socket.h \
   mbed-os/connectivity/nanostack/sal-stack-nanostack/source/configs/base/cfg_rf_tunnel.h \
-  mbed-os/connectivity/nanostack/sal-stack-nanostack/source/configs/base/cfg_ws_full.h \
   mbed-os/connectivity/nanostack/sal-stack-nanostack/source/configs/base/cfg_ws_border_router.h \
   mbed-os/connectivity/nanostack/sal-stack-nanostack/source/configs/base/cfg_ws_router.h \
-  mbed-os/connectivity/nanostack/sal-stack-nanostack/source/configs/base/cfg_ws_host.h \
-  mbed-os/connectivity/mbedtls/include/mbedtls/version.h \
   mbed-os/connectivity/mbedtls/include/mbedtls/config.h \
   mbed-os/connectivity/mbedtls/platform/inc/platform_mbed.h \
   mbedtls_lora_config.h \
@@ -57,6 +54,7 @@ BUILD/NUCLEO_WL55JC/ARMC6/mbed-os/connectivity/nanostack/sal-stack-nanostack/sou
   mbed-os/connectivity/mbedtls/include/mbedtls/ecdh.h \
   mbed-os/connectivity/mbedtls/include/mbedtls/entropy.h \
   mbed-os/connectivity/mbedtls/include/mbedtls/sha512.h \
+  mbed-os/connectivity/mbedtls/include/mbedtls/entropy_poll.h \
   mbed-os/connectivity/mbedtls/include/mbedtls/ctr_drbg.h \
   mbed-os/connectivity/mbedtls/include/mbedtls/aes.h \
   mbed-os/connectivity/mbedtls/include/mbedtls/debug.h \

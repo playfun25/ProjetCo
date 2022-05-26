@@ -15,10 +15,8 @@ BUILD/NUCLEO_WL55JC/ARMC6/mbed-os/connectivity/nanostack/sal-stack-nanostack/sou
   mbed-os/connectivity/nanostack/sal-stack-nanostack/source/configs/base/cfg_lowpan_host.h \
   mbed-os/connectivity/nanostack/sal-stack-nanostack/source/configs/base/cfg_local_socket.h \
   mbed-os/connectivity/nanostack/sal-stack-nanostack/source/configs/base/cfg_rf_tunnel.h \
-  mbed-os/connectivity/nanostack/sal-stack-nanostack/source/configs/base/cfg_ws_full.h \
   mbed-os/connectivity/nanostack/sal-stack-nanostack/source/configs/base/cfg_ws_border_router.h \
   mbed-os/connectivity/nanostack/sal-stack-nanostack/source/configs/base/cfg_ws_router.h \
-  mbed-os/connectivity/nanostack/sal-stack-nanostack/source/configs/base/cfg_ws_host.h \
   mbed-os/connectivity/nanostack/sal-stack-nanostack-eventloop/nanostack-event-loop/eventOS_event.h \
   mbed-os/connectivity/libraries/nanostack-libservice/mbed-client-libservice/ns_list.h \
   mbed-os/connectivity/libraries/nanostack-libservice/mbed-client-libservice/nsdynmemLIB.h \
@@ -46,7 +44,6 @@ BUILD/NUCLEO_WL55JC/ARMC6/mbed-os/connectivity/nanostack/sal-stack-nanostack/sou
   mbed-os/connectivity/nanostack/sal-stack-nanostack/source/MAC/IEEE802_15_4/mac_filter.h \
   mbed-os/connectivity/nanostack/sal-stack-nanostack/source/MAC/IEEE802_15_4/mac_mcps_sap.h \
   mbed-os/connectivity/nanostack/sal-stack-nanostack/source/MAC/IEEE802_15_4/mac_cca_threshold.h \
-  mbed-os/connectivity/nanostack/sal-stack-nanostack/source/MAC/IEEE802_15_4/mac_mode_switch.h \
   mbed-os/connectivity/nanostack/sal-stack-nanostack/source/MAC/rf_driver_storage.h \
   mbed-os/connectivity/nanostack/sal-stack-nanostack/source/Core/include/ns_monitor.h \
   mbed-os/platform/mbed-trace/include/mbed-trace/ns_trace.h \

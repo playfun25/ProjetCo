@@ -3,9 +3,9 @@ BUILD/NUCLEO_WL55JC/ARMC6/mbed-os/connectivity/netsocket/source/NetworkInterface
   BUILD/NUCLEO_WL55JC/ARMC6/mbed_config.h \
   mbed-os/connectivity/netsocket/include/netsocket/NetworkInterface.h \
   mbed-os/connectivity/netsocket/include/netsocket/nsapi_types.h \
+  mbed-os/connectivity/netsocket/include/netsocket/SocketAddress.h \
   mbed-os/platform/include/platform/mbed_toolchain.h \
   mbed-os/platform/include/platform/mbed_preprocessor.h \
-  mbed-os/connectivity/netsocket/include/netsocket/SocketAddress.h \
   mbed-os/platform/include/platform/Callback.h \
   mbed-os/platform/cxxsupport/mstd_cstddef \
   mbed-os/platform/cxxsupport/mstd_new \

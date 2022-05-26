@@ -3,8 +3,6 @@ BUILD/NUCLEO_WL55JC/ARMC6/mbed-os/features/frameworks/greentea-client/source/gre
   BUILD/NUCLEO_WL55JC/ARMC6/mbed_config.h \
   mbed-os/features/frameworks/greentea-client/greentea-client/test_env.h \
   mbed-os/features/frameworks/greentea-client/greentea-client/greentea_metrics.h \
-  mbed-os/platform/include/platform/mbed_toolchain.h \
-  mbed-os/platform/include/platform/mbed_preprocessor.h \
   mbed-os/platform/include/platform/mbed_stats.h \
   mbed-os/hal/include/hal/ticker_api.h \
   mbed-os/targets/TARGET_STM/device.h \
@@ -64,7 +62,6 @@ BUILD/NUCLEO_WL55JC/ARMC6/mbed-os/features/frameworks/greentea-client/source/gre
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_smartcard.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_smartcard_ex.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_smbus.h \
-  mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_smbus_ex.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_spi.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_spi_ex.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_subghz.h \
@@ -84,6 +81,8 @@ BUILD/NUCLEO_WL55JC/ARMC6/mbed-os/features/frameworks/greentea-client/source/gre
   mbed-os/targets/TARGET_STM/PinNamesTypes.h \
   mbed-os/targets/TARGET_STM/gpio_object.h \
   mbed-os/platform/include/platform/mbed_assert.h \
+  mbed-os/platform/include/platform/mbed_toolchain.h \
+  mbed-os/platform/include/platform/mbed_preprocessor.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_ll_usart.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_ll_tim.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_ll_rtc.h \

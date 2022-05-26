@@ -1,18 +1,22 @@
 #include <chrono>
+#include <cstdio>
 #include <mbed.h>
 #include <stdio.h>
+#include <string>
 
 #include "Callback.h"
+#include "DigitalOut.h"
 #include "ThisThread.h"
+#include "config.h"
 #include "lorawan/LoRaWANInterface.h"
 #include "lorawan/system/lorawan_data_structures.h"
 #include "events/EventQueue.h"
 #include "sensormanager.h"
 
 // Application helpers
-#include "DummySensor.h"
 #include "trace_helper.h"
 #include "lora_radio_helper.hpp"
+#include "LoraFrame.hpp"
 
 using namespace events;
 
@@ -102,6 +106,7 @@ int main(void)
 {
     printf("PUTAIN\n");
     SensorManager sensor;
+    //DigitalOut(sb27);
     int typeCapteur=0;
     
     // Permet d'afficher les traces
@@ -191,8 +196,13 @@ static void send_message()
     uint16_t packet_len;
     int16_t retcode;
     int32_t sensor_value;
+    LoraFrame* frame;
+    std::string frameString;
 
-    packet_len = sprintf((char *) tx_buffer, "JE suis révellé, je m'endors pour : ");
+    frame = new LoraFrame();
+    frame->addData(TEMP_SENSOR, 10);
+    frameString = std::string(frame->getFrame().begin(), frame->getFrame().end());
+    packet_len = sprintf((char *) tx_buffer, frameString.c_str());
 
     retcode = lorawan.send(MBED_CONF_LORA_APP_PORT, tx_buffer, packet_len,
                            MSG_UNCONFIRMED_FLAG);

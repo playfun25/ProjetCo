@@ -56,7 +56,6 @@ BUILD/NUCLEO_WL55JC/ARMC6/mbed-os/targets/TARGET_STM/TARGET_STM32WL/gpio_irq_dev
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_smartcard.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_smartcard_ex.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_smbus.h \
-  mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_smbus_ex.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_spi.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_spi_ex.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_subghz.h \

@@ -6,12 +6,8 @@ BUILD/NUCLEO_WL55JC/ARMC6/main.o: main.cpp \
   mbed-os/cmsis/device/rtos/include/mbed_rtx_storage.h \
   mbed-os/cmsis/CMSIS_5/CMSIS/RTOS2/RTX/Include/rtx_os.h \
   mbed-os/cmsis/CMSIS_5/CMSIS/RTOS2/Include/cmsis_os2.h \
-  mbed-os/cmsis/CMSIS_5/CMSIS/RTOS2/RTX/Include/rtx_def.h \
-  mbed-os/cmsis/device/RTE/include/RTE_Components.h \
   mbed-os/cmsis/device/rtos/include/mbed_rtx_conf.h \
   mbed-os/targets/TARGET_STM/mbed_rtx.h \
-  mbed-os/cmsis/device/mbed_cmsis_conf.h \
-  mbed-os/cmsis/CMSIS_5/CMSIS/RTOS2/RTX/Config/RTX_Config.h \
   mbed-os/rtos/include/rtos/Kernel.h \
   mbed-os/rtos/include/rtos/mbed_rtos_types.h \
   mbed-os/platform/include/platform/mbed_toolchain.h \
@@ -109,7 +105,6 @@ BUILD/NUCLEO_WL55JC/ARMC6/main.o: main.cpp \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_smartcard.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_smartcard_ex.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_smbus.h \
-  mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_smbus_ex.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_spi.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_spi_ex.h \
   mbed-os/targets/TARGET_STM/TARGET_STM32WL/STM32Cube_FW/STM32WLxx_HAL_Driver/stm32wlxx_hal_subghz.h \
@@ -282,7 +277,7 @@ BUILD/NUCLEO_WL55JC/ARMC6/main.o: main.cpp \
   mbed-os/platform/include/platform/ScopedRamExecutionLock.h \
   mbed-os/platform/include/platform/mbed_stats.h \
   mbed-os/platform/include/platform/Stream.h \
-  mbed-os/platform/include/platform/FileLike.h \
+  mbed-os/platform/include/platform/FileLike.h config.h \
   mbed-os/connectivity/lorawan/include/lorawan/LoRaWANInterface.h \
   mbed-os/connectivity/lorawan/include/lorawan/LoRaWANStack.h \
   mbed-os/connectivity/lorawan/lorastack/mac/LoRaMac.h \
@@ -296,7 +291,9 @@ BUILD/NUCLEO_WL55JC/ARMC6/main.o: main.cpp \
   mbed-os/connectivity/lorawan/lorastack/mac/LoRaMacCommand.h \
   mbed-os/connectivity/lorawan/lorastack/mac/LoRaMacCrypto.h \
   mbed-os/connectivity/mbedtls/include/mbedtls/cmac.h sensormanager.h \
-  config.h tempsensorstrategy.h sensorstrategy.h sensorslastvalue.h \
-  sensor.h DummySensor.h trace_helper.h lora_radio_helper.hpp \
+  tempsensorstrategy.h sensorstrategy.h sensorslastvalue.h \
+  humidsensorstrategy.h co2sensorstrategy.h luxsensorstrategy.h \
+  presssensorstrategy.h sensor.h trace_helper.h lora_radio_helper.hpp \
   mbed-os/connectivity/drivers/lora/TARGET_STM32WL/STM32WL_LoRaRadio.h \
-  mbed-os/connectivity/drivers/lora/TARGET_STM32WL/STM32WL_radio_driver.h
+  mbed-os/connectivity/drivers/lora/TARGET_STM32WL/STM32WL_radio_driver.h \
+  LoraFrame.hpp

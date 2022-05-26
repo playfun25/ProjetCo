@@ -10,7 +10,6 @@ BUILD/NUCLEO_WL55JC/ARMC6/mbed-os/connectivity/nanostack/coap-service/source/coa
   mbed-os/connectivity/libraries/mbed-coap/mbed-coap/sn_config.h \
   mbed-os/connectivity/libraries/nanostack-libservice/mbed-client-libservice/ns_list.h \
   mbed-os/connectivity/nanostack/coap-service/source/include/coap_security_handler.h \
-  mbed-os/connectivity/mbedtls/include/mbedtls/version.h \
   mbed-os/connectivity/mbedtls/include/mbedtls/config.h \
   mbed-os/connectivity/mbedtls/platform/inc/platform_mbed.h \
   mbedtls_lora_config.h \
