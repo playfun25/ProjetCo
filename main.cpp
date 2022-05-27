@@ -60,9 +60,11 @@ bool frameSent = false;
 
 // Mis a jour lors de la connexion et de la deconnexion
 bool connected = false;
+
+//ID du dernier capteur ayant prit la mesure 
 int typeCapteur = 0;
 
-
+ I2C i2c(I2C_SDA,I2C_SCL);
 
 
 
@@ -76,7 +78,7 @@ void printMesure(int type)
 {   
     switch(type){
         case TEMP_SENSOR:
-        printf("température : %.2f \n",SensorsLastValue::GetInstance()->getTempValue() );
+        printf("temperature : %.2f \n",SensorsLastValue::GetInstance()->getTempValue() );
         break;
         case HUMID_SENSOR: 
         printf("Humidité : %.2f \n",SensorsLastValue::GetInstance()->getHumidValue() );
@@ -88,7 +90,7 @@ void printMesure(int type)
         printf("Co2 : %.2f \n",SensorsLastValue::GetInstance()->getCO2Value() );
         break;
         case LUX_SENSOR:
-        printf("Luminausité : %.2f \n",SensorsLastValue::GetInstance()->getLumiValue() ); 
+        printf("Luminosite : %.2f \n",SensorsLastValue::GetInstance()->getLumiValue() ); 
         break;
         case eCO2_SENSOR:
         printf("eCO2  : %.2f \n",SensorsLastValue::GetInstance()->geteCO2Value() ); 
@@ -104,13 +106,17 @@ void printMesure(int type)
 
 
 
+
 /**
  * Point d'entrée de l'application
  */
 int main(void)
 {
-    SensorManager sensor;
+    // initialisation Watchdog de connexion Lora
+    Watchdog::get_instance().start(TIMEOUT_WATCHDOG_LORA); 
     int sleepTime = 0; // temporaire temps de dodo pour capteur 
+    SensorManager sensor;
+    
     //DigitalOut(sb27);
     
     // Permet d'afficher les traces
@@ -168,11 +174,19 @@ int main(void)
     {
         ev_queue.dispatch_for(std::chrono::milliseconds(CONNECTION_TEMPO));
     } while(connected == false);
-
-
+    
+    // Reinitialisation du Watchdog de connexion 
+    Watchdog::get_instance().kick();
+    Watchdog::get_instance().stop();
+    
+    // Initialisation Watchdog de l'application 
+    Watchdog::get_instance().start(TIMEOUT_WATCHDOG_APP);
+     
     // Boucle du programme principal
     while(1)
     {
+        // Rearmement du watchdog a chaque mesure
+        Watchdog::get_instance().kick();
         frameSent = false;
 
         // On realise la gestion capteur
