@@ -54,9 +54,9 @@ int SensorManager::wakeUp(int timePassed)
     if(this->sensorVector->at(0)->getPeriodLeft()<=0){
         /* get mesure
          */
-    if (this->sensorVector->at(0)->wakeUp()) return -1;
-    if (this->sensorVector->at(0)->getMesure()) return -1;
-    if (this->sensorVector->at(0)->lowPower()) return -1;
+    if (this->sensorVector->at(0)->wakeUp());
+    if (this->sensorVector->at(0)->getMesure());
+    if (this->sensorVector->at(0)->lowPower());
 
         this->sensorVector->at(0)->resetPeriod();
         ret = this->sensorVector->at(0)->getType();

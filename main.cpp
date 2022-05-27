@@ -62,7 +62,7 @@ bool frameSent = false;
 bool connected = false;
 int typeCapteur = 0;
 
-
+ I2C i2c(PA_11,PA_12);
 
 
 
