@@ -1,11 +1,21 @@
 #pragma once
 #include<cstdint>
 
-#include"sensorstrategy.h"
+#include<sensorstrategy.h>
 
+/**
+ * Classe qui represente un capteur
+ * Cette classe fixe les methodes que tous les capteurs doivent implémenter
+ */
 class Sensor
 {
 public:
+    /**
+     * Construceur
+     * \param period periode  
+     * \param type 
+     * \param strategy
+     */
     Sensor(int _period,uint8_t _type, SensorStrategy * _strategy );
     int decrementPeriod(int value);
     void resetPeriod();
