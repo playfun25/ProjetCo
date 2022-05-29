@@ -32,7 +32,7 @@ public:
          return 0;
     };
     int lowPower() override{
-         PRESS_POWER_LINE = 1;
+         //PRESS_POWER_LINE = 1;
          //already done in the performReading method (after the measurments)
         return 0;
     };

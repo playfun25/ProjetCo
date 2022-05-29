@@ -12,7 +12,7 @@ public:
         uint16_t temp;
         ret += SI1145::getInstance()->getUV(temp);
         ret += SI1145::getInstance()->getUV(temp);
-         SensorsLastValue::GetInstance()->setUVValue((float)temp);
+         SensorsLastValue::GetInstance()->setUVValue((float)temp/100);
         return 0;
     };
     int wakeUp() override{

@@ -15,6 +15,10 @@ SensorManager::SensorManager()
     Alim_l3 =0;
 
     this->sensorVector = new std::vector<Sensor*>();
+    
+    #ifdef UV_SENSOR_ACTVE
+        sensorVector->push_back(new Sensor(UV_SENSOR_PERIOD,UV_SENSOR,new UV_STRATEGIE));
+    #endif
 
     #ifdef LUX_SENSOR_ACTVE
         sensorVector->push_back(new Sensor(LUX_SENSOR_PERIOD,LUX_SENSOR,new LUX_STRATEGIE));
@@ -36,9 +40,6 @@ SensorManager::SensorManager()
     #endif
     #ifdef TOVC_SENSOR_ACTVE
         sensorVector->push_back(new Sensor(TOVC_SENSOR_PERIOD,TOVC_SENSOR,new TOVC_STRATEGIE));
-    #endif
-    #ifdef UV_SENSOR_ACTVE
-        sensorVector->push_back(new Sensor(UV_SENSOR_PERIOD,UV_SENSOR,new UV_STRATEGIE));
     #endif
 
     ret += this->initSensors();
@@ -62,15 +63,15 @@ int SensorManager::wakeUp(int timePassed)
     {
         if (this->sensorVector->at(0)->wakeUp())
         {
-            return -1;
+            //return -1;
         }
         if (this->sensorVector->at(0)->getMesure())
         {
-            return -2;
+            //return -2;
         }
         if (this->sensorVector->at(0)->lowPower())
         {
-            return -3;
+            //return -3;
         }
 
         this->sensorVector->at(0)->resetPeriod();

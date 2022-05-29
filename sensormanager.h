@@ -18,7 +18,7 @@
     #include "co2sensorstrategy.h"
 #endif
 #ifdef LUX_SENSOR_ACTVE
-    #include "luxSensorStrategy.h"
+    #include "luxsensorstrategy.h"
 #endif
 #ifdef PRESS_SENSOR_ACTVE
     #include "presssensorstrategy.h"

@@ -214,7 +214,7 @@ void printMesure(int type)
             printf("Pression : %.2f \n",SensorsLastValue::GetInstance()->getpressValue() );
             break;
         case CO2_SENSOR:
-            printf("Co2 : %.2f \n",SensorsLastValue::GetInstance()->getCO2Value() );
+            printf("Co2 : %.2f \n",SensorsLastValue::GetInstance()->getUVValue() );
             break;
         case LUX_SENSOR:
             printf("Luminosite : %.2f \n",SensorsLastValue::GetInstance()->getLumiValue() );
@@ -329,7 +329,7 @@ int main(void)
         
         // On reset le watchdog
         watchdogTicker = 0;
-        
+
         // Ajout de l'evenement a la queue
         ev_queue.call_in(1, send_message);
         

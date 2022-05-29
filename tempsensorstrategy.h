@@ -33,7 +33,7 @@ public:
          return 0;
     };
     int lowPower() override{
-         TEMP_POWER_LINE = 1;
+         //TEMP_POWER_LINE = 1;
          //already done in the performReading method (after the measurments)
         return 0;
     };
