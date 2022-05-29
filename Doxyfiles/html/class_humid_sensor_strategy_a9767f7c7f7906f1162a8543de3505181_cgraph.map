@@ -1,0 +1,5 @@
+<map id="HumidSensorStrategy::getMesure" name="HumidSensorStrategy::getMesure">
+<area shape="rect" id="node1" title="Recupere la mesure du capteur physique." alt="" coords="5,27,169,69"/>
+<area shape="rect" id="node2" href="$class_sensors_last_value.html#a69d7bedcb9e16e3cc08d103e8ef8dadf" title="Recupere l&#39;unique instance." alt="" coords="217,5,440,32"/>
+<area shape="rect" id="node3" href="$class_sensors_last_value.html#a718f166c7f95df28cbe872f7b16d933a" title="Fixe la valeur de l&#39;humidite." alt="" coords="225,57,432,98"/>
+</map>

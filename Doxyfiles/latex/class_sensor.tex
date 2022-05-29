@@ -1,0 +1,209 @@
+\hypertarget{class_sensor}{}\doxysection{Référence de la classe Sensor}
+\label{class_sensor}\index{Sensor@{Sensor}}
+
+
+Represente un capteur.  
+
+
+
+
+{\ttfamily \#include $<$sensor.\+h$>$}
+
+
+
+Graphe de collaboration de Sensor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{class_sensor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sensor_a9d269709f2deb2d988a5f1f65e908678}{Sensor}} (int \+\_\+period, uint8\+\_\+t \+\_\+type, \mbox{\hyperlink{class_sensor_strategy}{Sensor\+Strategy}} $\ast$\+\_\+strategy)
+\begin{DoxyCompactList}\small\item\em Construit un nouveau capteur. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sensor_aa343e8695fc0de4efa61923829fdedc9}{decrement\+Period}} (int value)
+\begin{DoxyCompactList}\small\item\em Reduit le temps avant le prochain reveil. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sensor_a2f6198004ed2214988183cec41426dd1}{reset\+Period}} ()
+\begin{DoxyCompactList}\small\item\em Remet le temps de reveil a sa valeur de base. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sensor_a96845aa794e3658f348c5bc2297929bb}{get\+Period\+Left}} () const
+\begin{DoxyCompactList}\small\item\em Recupere la valeur du temps avant le prochain reveil. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sensor_aa04e6d8cbdde8fcf23486129f90b9fe8}{get\+Mesure}} ()
+\begin{DoxyCompactList}\small\item\em Recupere la mesure du capteur. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sensor_afcfbd1fe551c75285004556c8a1da356}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Recupere le type du capteur, correspond a un define. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sensor_a507168d6052e63925653a308f259cc10}{wake\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Reveil le capteur. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sensor_aa6ef809240396b2699e34831ca996089}{low\+Power}} ()
+\begin{DoxyCompactList}\small\item\em Met le capteur en mode basse consommation. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sensor_aeb0d54ff81b349abb3a16d9eaf79f479}{init}} ()
+\begin{DoxyCompactList}\small\item\em Initialise le capteur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Represente un capteur. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_sensor_a9d269709f2deb2d988a5f1f65e908678}\label{class_sensor_a9d269709f2deb2d988a5f1f65e908678}} 
+\index{Sensor@{Sensor}!Sensor@{Sensor}}
+\index{Sensor@{Sensor}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{Sensor()}{Sensor()}}
+{\footnotesize\ttfamily Sensor\+::\+Sensor (\begin{DoxyParamCaption}\item[{int}]{\+\_\+period,  }\item[{uint8\+\_\+t}]{\+\_\+type,  }\item[{\mbox{\hyperlink{class_sensor_strategy}{Sensor\+Strategy}} $\ast$}]{\+\_\+strategy }\end{DoxyParamCaption})}
+
+
+
+Construit un nouveau capteur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+period} & le temps que passe le capteur en mode sleep, utiliser le define \\
+\hline
+{\em \+\_\+type} & type de capteur, il faut utiliser le define \\
+\hline
+{\em \+\_\+strategy} & strategie que le capteur va utiliser, utiliser le define \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_sensor_aa343e8695fc0de4efa61923829fdedc9}\label{class_sensor_aa343e8695fc0de4efa61923829fdedc9}} 
+\index{Sensor@{Sensor}!decrementPeriod@{decrementPeriod}}
+\index{decrementPeriod@{decrementPeriod}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{decrementPeriod()}{decrementPeriod()}}
+{\footnotesize\ttfamily int Sensor\+::decrement\+Period (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+Reduit le temps avant le prochain reveil. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em value} & valeur du temps a retire en millisecondes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+int code erreur, -\/1 si l\textquotesingle{}operation n\textquotesingle{}est pas reussi 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sensor_aa04e6d8cbdde8fcf23486129f90b9fe8}\label{class_sensor_aa04e6d8cbdde8fcf23486129f90b9fe8}} 
+\index{Sensor@{Sensor}!getMesure@{getMesure}}
+\index{getMesure@{getMesure}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{getMesure()}{getMesure()}}
+{\footnotesize\ttfamily int Sensor\+::get\+Mesure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Recupere la mesure du capteur. 
+
+\begin{DoxyReturn}{Renvoie}
+int retourne la mesure du capteur 
+\end{DoxyReturn}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_sensor_aa04e6d8cbdde8fcf23486129f90b9fe8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_sensor_a96845aa794e3658f348c5bc2297929bb}\label{class_sensor_a96845aa794e3658f348c5bc2297929bb}} 
+\index{Sensor@{Sensor}!getPeriodLeft@{getPeriodLeft}}
+\index{getPeriodLeft@{getPeriodLeft}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{getPeriodLeft()}{getPeriodLeft()}}
+{\footnotesize\ttfamily int Sensor\+::get\+Period\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Recupere la valeur du temps avant le prochain reveil. 
+
+\begin{DoxyReturn}{Renvoie}
+int la valeur du temps avant le prochain reveil en millisecondes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sensor_afcfbd1fe551c75285004556c8a1da356}\label{class_sensor_afcfbd1fe551c75285004556c8a1da356}} 
+\index{Sensor@{Sensor}!getType@{getType}}
+\index{getType@{getType}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily int Sensor\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Recupere le type du capteur, correspond a un define. 
+
+\begin{DoxyReturn}{Renvoie}
+int retourne le type du capteur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sensor_aeb0d54ff81b349abb3a16d9eaf79f479}\label{class_sensor_aeb0d54ff81b349abb3a16d9eaf79f479}} 
+\index{Sensor@{Sensor}!init@{init}}
+\index{init@{init}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily int Sensor\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialise le capteur. 
+
+\begin{DoxyReturn}{Renvoie}
+int retourne le code erreur de la strategie 
+\end{DoxyReturn}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{class_sensor_aeb0d54ff81b349abb3a16d9eaf79f479_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_sensor_aa6ef809240396b2699e34831ca996089}\label{class_sensor_aa6ef809240396b2699e34831ca996089}} 
+\index{Sensor@{Sensor}!lowPower@{lowPower}}
+\index{lowPower@{lowPower}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{lowPower()}{lowPower()}}
+{\footnotesize\ttfamily int Sensor\+::low\+Power (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Met le capteur en mode basse consommation. 
+
+\begin{DoxyReturn}{Renvoie}
+int retourne le code erreur de la strategie 
+\end{DoxyReturn}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_sensor_aa6ef809240396b2699e34831ca996089_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_sensor_a2f6198004ed2214988183cec41426dd1}\label{class_sensor_a2f6198004ed2214988183cec41426dd1}} 
+\index{Sensor@{Sensor}!resetPeriod@{resetPeriod}}
+\index{resetPeriod@{resetPeriod}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{resetPeriod()}{resetPeriod()}}
+{\footnotesize\ttfamily void Sensor\+::reset\+Period (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Remet le temps de reveil a sa valeur de base. 
+
+\mbox{\Hypertarget{class_sensor_a507168d6052e63925653a308f259cc10}\label{class_sensor_a507168d6052e63925653a308f259cc10}} 
+\index{Sensor@{Sensor}!wakeUp@{wakeUp}}
+\index{wakeUp@{wakeUp}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{wakeUp()}{wakeUp()}}
+{\footnotesize\ttfamily int Sensor\+::wake\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reveil le capteur. 
+
+\begin{DoxyReturn}{Renvoie}
+int retourne le code erreur de la strategie 
+\end{DoxyReturn}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{class_sensor_a507168d6052e63925653a308f259cc10_cgraph}
+\end{center}
+\end{figure}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/teddy/\+Mbed Programs/\+Projet\+Co/sensor.\+h\item 
+/home/teddy/\+Mbed Programs/\+Projet\+Co/sensor.\+cpp\end{DoxyCompactItemize}

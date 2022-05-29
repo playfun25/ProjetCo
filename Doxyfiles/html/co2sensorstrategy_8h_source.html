@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SmartOme:  Fichier source de /home/teddy/Mbed Programs/ProjetCo/co2sensorstrategy.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SmartOme
+   &#160;<span id="projectnumber">0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">/home/teddy/Mbed Programs/ProjetCo/co2sensorstrategy.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;sensorstrategy.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_co2_sensor_strategy.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_co2_sensor_strategy.html">Co2SensorStrategy</a> : <span class="keyword">public</span> <a class="code" href="class_sensor_strategy.html">SensorStrategy</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_co2_sensor_strategy.html#a7ae263f3c88117d40ae1994275436774">Co2SensorStrategy</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_co2_sensor_strategy.html#a2101ea4dd373ea8b56b4d170404eccb5">getMesure</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_co2_sensor_strategy.html#a5520a1abe0c1fd9cd2677f6708576f4b">wakeUp</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_co2_sensor_strategy.html#ac699bb54d99bbade1f5776b439127057">init</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_co2_sensor_strategy.html#a95ab74e92ca4768784d243aa84ae29fb">lowPower</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_co2_sensor_strategy_html_a7ae263f3c88117d40ae1994275436774"><div class="ttname"><a href="class_co2_sensor_strategy.html#a7ae263f3c88117d40ae1994275436774">Co2SensorStrategy::Co2SensorStrategy</a></div><div class="ttdeci">Co2SensorStrategy()</div><div class="ttdoc">Construit la strategie.</div><div class="ttdef"><b>Definition:</b> co2sensorstrategy.cpp:3</div></div>
+<div class="ttc" id="aclass_co2_sensor_strategy_html_a2101ea4dd373ea8b56b4d170404eccb5"><div class="ttname"><a href="class_co2_sensor_strategy.html#a2101ea4dd373ea8b56b4d170404eccb5">Co2SensorStrategy::getMesure</a></div><div class="ttdeci">int getMesure() override</div><div class="ttdoc">Recupere la mesure du capteur physique.</div><div class="ttdef"><b>Definition:</b> co2sensorstrategy.cpp:8</div></div>
+<div class="ttc" id="aclass_sensors_last_value_html_a69d7bedcb9e16e3cc08d103e8ef8dadf"><div class="ttname"><a href="class_sensors_last_value.html#a69d7bedcb9e16e3cc08d103e8ef8dadf">SensorsLastValue::GetInstance</a></div><div class="ttdeci">static SensorsLastValue * GetInstance()</div><div class="ttdoc">Recupere l'unique instance.</div><div class="ttdef"><b>Definition:</b> sensorslastvalue.cpp:6</div></div>
+<div class="ttc" id="aclass_co2_sensor_strategy_html_ac699bb54d99bbade1f5776b439127057"><div class="ttname"><a href="class_co2_sensor_strategy.html#ac699bb54d99bbade1f5776b439127057">Co2SensorStrategy::init</a></div><div class="ttdeci">int init() override</div><div class="ttdoc">Initialise le capteur physique.</div><div class="ttdef"><b>Definition:</b> co2sensorstrategy.cpp:19</div></div>
+<div class="ttc" id="aclass_co2_sensor_strategy_html"><div class="ttname"><a href="class_co2_sensor_strategy.html">Co2SensorStrategy</a></div><div class="ttdoc">Strategie des capteurs de CO2.</div><div class="ttdef"><b>Definition:</b> co2sensorstrategy.h:11</div></div>
+<div class="ttc" id="aclass_co2_sensor_strategy_html_a95ab74e92ca4768784d243aa84ae29fb"><div class="ttname"><a href="class_co2_sensor_strategy.html#a95ab74e92ca4768784d243aa84ae29fb">Co2SensorStrategy::lowPower</a></div><div class="ttdeci">int lowPower() override</div><div class="ttdoc">Met le capteur physique en mode basse consomation.</div><div class="ttdef"><b>Definition:</b> co2sensorstrategy.cpp:24</div></div>
+<div class="ttc" id="aclass_sensor_strategy_html"><div class="ttname"><a href="class_sensor_strategy.html">SensorStrategy</a></div><div class="ttdoc">Represente la strategie d'un capteur.</div><div class="ttdef"><b>Definition:</b> sensorstrategy.h:9</div></div>
+<div class="ttc" id="aclass_sensors_last_value_html_a1a020702978780f99f6563db45fa7485"><div class="ttname"><a href="class_sensors_last_value.html#a1a020702978780f99f6563db45fa7485">SensorsLastValue::setCO2Value</a></div><div class="ttdeci">void setCO2Value(float value)</div><div class="ttdoc">Fixe la valeur du CO2.</div><div class="ttdef"><b>Definition:</b> sensorslastvalue.h:152</div></div>
+<div class="ttc" id="aclass_co2_sensor_strategy_html_a5520a1abe0c1fd9cd2677f6708576f4b"><div class="ttname"><a href="class_co2_sensor_strategy.html#a5520a1abe0c1fd9cd2677f6708576f4b">Co2SensorStrategy::wakeUp</a></div><div class="ttdeci">int wakeUp() override</div><div class="ttdoc">Reveil le capteur physique.</div><div class="ttdef"><b>Definition:</b> co2sensorstrategy.cpp:14</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

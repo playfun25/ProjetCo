@@ -1,0 +1,5 @@
+<map id="LuxSensorStrategy::getMesure" name="LuxSensorStrategy::getMesure">
+<area shape="rect" id="node1" title="Recupere la mesure du capteur physique." alt="" coords="5,27,156,69"/>
+<area shape="rect" id="node2" href="$class_sensors_last_value.html#a69d7bedcb9e16e3cc08d103e8ef8dadf" title="Recupere l&#39;unique instance." alt="" coords="204,5,427,32"/>
+<area shape="rect" id="node3" href="$class_sensors_last_value.html#a1f0448e3a1176741e220618b7aa152df" title="Fixe la valeur de la luminosite." alt="" coords="217,57,413,98"/>
+</map>

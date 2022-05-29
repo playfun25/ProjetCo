@@ -41,6 +41,3 @@ class LuxSensorStrategy :  public SensorStrategy
         return 0;
     };
 };
-
-
-

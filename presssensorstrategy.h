@@ -2,7 +2,7 @@
 #include "sensorstrategy.h"
 #include "BME280.h"
 #include "sensorslastvalue.h"
-
+#include "config.h"
 class PressSensorStrategy : public SensorStrategy
 {
 public:
@@ -18,16 +18,21 @@ public:
         return ret;
     };
     int wakeUp() override{
+        PRESS_POWER_LINE = 0;
+        BME280::getInstance()->initialize();
         BME280::getInstance()->setForcedMode();
         return 0;
     };
     int init() override{
+        PRESS_POWER_LINE = 0;
         //init already done at the build of the object sensor
         //need add error reporting
-         BME280::getInstance();
+         BME280::getInstance()->initialize();
+        BME280::getInstance()->setForcedMode();
          return 0;
     };
     int lowPower() override{
+         PRESS_POWER_LINE = 1;
          //already done in the performReading method (after the measurments)
         return 0;
     };

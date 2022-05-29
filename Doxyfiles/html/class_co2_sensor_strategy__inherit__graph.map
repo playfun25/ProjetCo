@@ -1,0 +1,4 @@
+<map id="Co2SensorStrategy" name="Co2SensorStrategy">
+<area shape="rect" id="node1" title="Strategie des capteurs de CO2." alt="" coords="5,189,176,325"/>
+<area shape="rect" id="node2" href="$class_sensor_strategy.html" title="Represente la strategie d&#39;un capteur." alt="" coords="12,5,169,141"/>
+</map>

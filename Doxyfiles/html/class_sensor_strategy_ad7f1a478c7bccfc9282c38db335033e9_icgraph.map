@@ -1,0 +1,4 @@
+<map id="SensorStrategy::lowPower" name="SensorStrategy::lowPower">
+<area shape="rect" id="node1" title="Passe en mode basse consomation." alt="" coords="191,5,381,32"/>
+<area shape="rect" id="node2" href="$class_sensor.html#aa6ef809240396b2699e34831ca996089" title="Met le capteur en mode basse consommation." alt="" coords="5,5,143,32"/>
+</map>

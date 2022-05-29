@@ -1,0 +1,4 @@
+<map id="SensorsLastValue::setLumiValue" name="SensorsLastValue::setLumiValue">
+<area shape="rect" id="node1" title="Fixe la valeur de la luminosite." alt="" coords="204,5,400,47"/>
+<area shape="rect" id="node2" href="$class_lux_sensor_strategy.html#abebbd7474d8593bca009e40ecf431324" title="Recupere la mesure du capteur physique." alt="" coords="5,5,156,47"/>
+</map>

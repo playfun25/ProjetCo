@@ -30,51 +30,34 @@
 #include "mbed.h"
 #include "BME280.h"
 
-BME280::BME280(PinName sda, PinName scl, char slave_adr)
-    :
-    i2c_p(new I2C(sda, scl)), 
-    i2c(*i2c_p),
-    address(slave_adr),
-    t_fine(0)
+
+BME280::BME280(char slave_adr): address(slave_adr),t_fine(0)
 {
-    initialize();
 }
 
-BME280::BME280(I2C &i2c_obj, char slave_adr)
-    :
-    i2c_p(NULL), 
-    i2c(i2c_obj),
-    address(slave_adr),
-    t_fine(0)
-{
-    initialize();
-}
 
-BME280::~BME280()
-{
-    if (NULL != i2c_p)
-        delete  i2c_p;
-}
+
     
-void BME280::initialize()
+int BME280::initialize()
 {
+    int ret;
     char cmd[18];
  
     cmd[0] = 0xf2; // ctrl_hum
     cmd[1] = 0x01; // Humidity oversampling x1  
-    i2c.write(address, cmd, 2);
+    ret += i2c.write(address, cmd, 2);
  
     cmd[0] = 0xf4; // ctrl_meas
     cmd[1] = 0x24; // Temparature oversampling x1, Pressure oversampling x1, SLEEP mode
-    i2c.write(address, cmd, 2);
+    ret += i2c.write(address, cmd, 2);
  
     cmd[0] = 0xf5; // config
     cmd[1] = 0xa0; // Standby 1000ms, Filter off 
-    i2c.write(address, cmd, 2);
+    ret += i2c.write(address, cmd, 2);
  
     cmd[0] = 0x88; // read dig_T regs
-    i2c.write(address, cmd, 1);
-    i2c.read(address, cmd, 6);
+    ret += i2c.write(address, cmd, 1);
+    ret += i2c.read(address, cmd, 6);
  
     dig_T1 = (cmd[1] << 8) | cmd[0];
     dig_T2 = (cmd[3] << 8) | cmd[2];
@@ -83,8 +66,8 @@ void BME280::initialize()
     DEBUG_PRINT("dig_T = 0x%x, 0x%x, 0x%x\n", dig_T1, dig_T2, dig_T3);
  
     cmd[0] = 0x8E; // read dig_P regs
-    i2c.write(address, cmd, 1);
-    i2c.read(address, cmd, 18);
+    ret += i2c.write(address, cmd, 1);
+    ret += i2c.read(address, cmd, 18);
  
     dig_P1 = (cmd[ 1] << 8) | cmd[ 0];
     dig_P2 = (cmd[ 3] << 8) | cmd[ 2];
@@ -99,11 +82,11 @@ void BME280::initialize()
     DEBUG_PRINT("dig_P = 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x\n", dig_P1, dig_P2, dig_P3, dig_P4, dig_P5, dig_P6, dig_P7, dig_P8, dig_P9);
  
     cmd[0] = 0xA1; // read dig_H regs
-    i2c.write(address, cmd, 1);
-    i2c.read(address, cmd, 1);
+    ret += i2c.write(address, cmd, 1);
+    ret += i2c.read(address, cmd, 1);
      cmd[1] = 0xE1; // read dig_H regs
-    i2c.write(address, &cmd[1], 1);
-    i2c.read(address, &cmd[1], 7);
+    ret += i2c.write(address, &cmd[1], 1);
+    ret += i2c.read(address, &cmd[1], 7);
 
     dig_H1 = cmd[0];
     dig_H2 = (cmd[2] << 8) | cmd[1];
@@ -113,6 +96,7 @@ void BME280::initialize()
     dig_H6 = cmd[7];
  
     DEBUG_PRINT("dig_H = 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x\n", dig_H1, dig_H2, dig_H3, dig_H4, dig_H5, dig_H6);
+    return ret;
 }
 
 void BME280::setForcedMode()
@@ -232,8 +216,7 @@ BME280* BME280::instance = nullptr;
 
 BME280 * BME280::getInstance(){
     if (instance == nullptr){
-        instance = new BME280(PA_11,PA_12);
+        instance = new BME280();
     }
     return instance;
 }
-

@@ -1,0 +1,147 @@
+\hypertarget{class_co2_sensor_strategy}{}\doxysection{Référence de la classe Co2\+Sensor\+Strategy}
+\label{class_co2_sensor_strategy}\index{Co2SensorStrategy@{Co2SensorStrategy}}
+
+
+Strategie des capteurs de C\+O2.  
+
+
+
+
+{\ttfamily \#include $<$co2sensorstrategy.\+h$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de Co2\+Sensor\+Strategy\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{class_co2_sensor_strategy__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de Co2\+Sensor\+Strategy\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{class_co2_sensor_strategy__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_co2_sensor_strategy_a7ae263f3c88117d40ae1994275436774}{Co2\+Sensor\+Strategy}} ()
+\begin{DoxyCompactList}\small\item\em Construit la strategie. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_co2_sensor_strategy_a2101ea4dd373ea8b56b4d170404eccb5}{get\+Mesure}} () override
+\begin{DoxyCompactList}\small\item\em Recupere la mesure du capteur physique. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_co2_sensor_strategy_a5520a1abe0c1fd9cd2677f6708576f4b}{wake\+Up}} () override
+\begin{DoxyCompactList}\small\item\em Reveil le capteur physique. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_co2_sensor_strategy_ac699bb54d99bbade1f5776b439127057}{init}} () override
+\begin{DoxyCompactList}\small\item\em Initialise le capteur physique. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_co2_sensor_strategy_a95ab74e92ca4768784d243aa84ae29fb}{low\+Power}} () override
+\begin{DoxyCompactList}\small\item\em Met le capteur physique en mode basse consomation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Strategie des capteurs de C\+O2. 
+
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_co2_sensor_strategy_a7ae263f3c88117d40ae1994275436774}\label{class_co2_sensor_strategy_a7ae263f3c88117d40ae1994275436774}} 
+\index{Co2SensorStrategy@{Co2SensorStrategy}!Co2SensorStrategy@{Co2SensorStrategy}}
+\index{Co2SensorStrategy@{Co2SensorStrategy}!Co2SensorStrategy@{Co2SensorStrategy}}
+\doxysubsubsection{\texorpdfstring{Co2SensorStrategy()}{Co2SensorStrategy()}}
+{\footnotesize\ttfamily Co2\+Sensor\+Strategy\+::\+Co2\+Sensor\+Strategy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construit la strategie. 
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_co2_sensor_strategy_a2101ea4dd373ea8b56b4d170404eccb5}\label{class_co2_sensor_strategy_a2101ea4dd373ea8b56b4d170404eccb5}} 
+\index{Co2SensorStrategy@{Co2SensorStrategy}!getMesure@{getMesure}}
+\index{getMesure@{getMesure}!Co2SensorStrategy@{Co2SensorStrategy}}
+\doxysubsubsection{\texorpdfstring{getMesure()}{getMesure()}}
+{\footnotesize\ttfamily int Co2\+Sensor\+Strategy\+::get\+Mesure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Recupere la mesure du capteur physique. 
+
+\begin{DoxyReturn}{Renvoie}
+int retourne la mesure du capteur 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{class_sensor_strategy_ac51565a8d0f5c1a4ae67a04a2840aa6b}{Sensor\+Strategy}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_co2_sensor_strategy_a2101ea4dd373ea8b56b4d170404eccb5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_co2_sensor_strategy_ac699bb54d99bbade1f5776b439127057}\label{class_co2_sensor_strategy_ac699bb54d99bbade1f5776b439127057}} 
+\index{Co2SensorStrategy@{Co2SensorStrategy}!init@{init}}
+\index{init@{init}!Co2SensorStrategy@{Co2SensorStrategy}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily int Co2\+Sensor\+Strategy\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initialise le capteur physique. 
+
+\begin{DoxyReturn}{Renvoie}
+retourne 0 si tout c\textquotesingle{}est bien passe, retourne le code erreur du capteur sinon 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{class_sensor_strategy_ad78fb4b5239c43ac4d3770eb9f175959}{Sensor\+Strategy}}.
+
+\mbox{\Hypertarget{class_co2_sensor_strategy_a95ab74e92ca4768784d243aa84ae29fb}\label{class_co2_sensor_strategy_a95ab74e92ca4768784d243aa84ae29fb}} 
+\index{Co2SensorStrategy@{Co2SensorStrategy}!lowPower@{lowPower}}
+\index{lowPower@{lowPower}!Co2SensorStrategy@{Co2SensorStrategy}}
+\doxysubsubsection{\texorpdfstring{lowPower()}{lowPower()}}
+{\footnotesize\ttfamily int Co2\+Sensor\+Strategy\+::low\+Power (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Met le capteur physique en mode basse consomation. 
+
+\begin{DoxyReturn}{Renvoie}
+retourne 0 si tout c\textquotesingle{}est bien passe, retourne le code erreur du capteur sinon 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{class_sensor_strategy_ad7f1a478c7bccfc9282c38db335033e9}{Sensor\+Strategy}}.
+
+\mbox{\Hypertarget{class_co2_sensor_strategy_a5520a1abe0c1fd9cd2677f6708576f4b}\label{class_co2_sensor_strategy_a5520a1abe0c1fd9cd2677f6708576f4b}} 
+\index{Co2SensorStrategy@{Co2SensorStrategy}!wakeUp@{wakeUp}}
+\index{wakeUp@{wakeUp}!Co2SensorStrategy@{Co2SensorStrategy}}
+\doxysubsubsection{\texorpdfstring{wakeUp()}{wakeUp()}}
+{\footnotesize\ttfamily int Co2\+Sensor\+Strategy\+::wake\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reveil le capteur physique. 
+
+\begin{DoxyReturn}{Renvoie}
+int retourne 0 si tout c\textquotesingle{}est bien passe, retourne le code erreur du capteur sinon 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{class_sensor_strategy_a7489fcebeb57cebd81b48c1b0ab69fb2}{Sensor\+Strategy}}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/teddy/\+Mbed Programs/\+Projet\+Co/co2sensorstrategy.\+h\item 
+/home/teddy/\+Mbed Programs/\+Projet\+Co/co2sensorstrategy.\+cpp\end{DoxyCompactItemize}

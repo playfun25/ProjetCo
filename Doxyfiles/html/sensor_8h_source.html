@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SmartOme:  Fichier source de /home/teddy/Mbed Programs/ProjetCo/sensor.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SmartOme
+   &#160;<span id="projectnumber">0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">/home/teddy/Mbed Programs/ProjetCo/sensor.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include&lt;cstdint&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include&lt;sensorstrategy.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_sensor.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_sensor.html">Sensor</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">int</span> periodLeft;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> period;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> type;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_sensor_strategy.html">SensorStrategy</a> * strategy;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="class_sensor.html#a9d269709f2deb2d988a5f1f65e908678">Sensor</a>(<span class="keywordtype">int</span> _period,uint8_t _type, <a class="code" href="class_sensor_strategy.html">SensorStrategy</a> * _strategy );</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_sensor.html#aa343e8695fc0de4efa61923829fdedc9">decrementPeriod</a>(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sensor.html#a2f6198004ed2214988183cec41426dd1">resetPeriod</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_sensor.html#a96845aa794e3658f348c5bc2297929bb">getPeriodLeft</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_sensor.html#aa04e6d8cbdde8fcf23486129f90b9fe8">getMesure</a>();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_sensor.html#afcfbd1fe551c75285004556c8a1da356">getType</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_sensor.html#a507168d6052e63925653a308f259cc10">wakeUp</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_sensor.html#aa6ef809240396b2699e34831ca996089">lowPower</a>();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_sensor.html#aeb0d54ff81b349abb3a16d9eaf79f479">init</a>();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;};</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_sensor_strategy_html_ac51565a8d0f5c1a4ae67a04a2840aa6b"><div class="ttname"><a href="class_sensor_strategy.html#ac51565a8d0f5c1a4ae67a04a2840aa6b">SensorStrategy::getMesure</a></div><div class="ttdeci">virtual int getMesure()=0</div><div class="ttdoc">Recupere la mesure.</div></div>
+<div class="ttc" id="aclass_sensor_strategy_html_ad7f1a478c7bccfc9282c38db335033e9"><div class="ttname"><a href="class_sensor_strategy.html#ad7f1a478c7bccfc9282c38db335033e9">SensorStrategy::lowPower</a></div><div class="ttdeci">virtual int lowPower()=0</div><div class="ttdoc">Passe en mode basse consomation.</div></div>
+<div class="ttc" id="aclass_sensor_html_a2f6198004ed2214988183cec41426dd1"><div class="ttname"><a href="class_sensor.html#a2f6198004ed2214988183cec41426dd1">Sensor::resetPeriod</a></div><div class="ttdeci">void resetPeriod()</div><div class="ttdoc">Remet le temps de reveil a sa valeur de base.</div><div class="ttdef"><b>Definition:</b> sensor.cpp:10</div></div>
+<div class="ttc" id="aclass_sensor_html_aa6ef809240396b2699e34831ca996089"><div class="ttname"><a href="class_sensor.html#aa6ef809240396b2699e34831ca996089">Sensor::lowPower</a></div><div class="ttdeci">int lowPower()</div><div class="ttdoc">Met le capteur en mode basse consommation.</div><div class="ttdef"><b>Definition:</b> sensor.cpp:28</div></div>
+<div class="ttc" id="aclass_sensor_html_a9d269709f2deb2d988a5f1f65e908678"><div class="ttname"><a href="class_sensor.html#a9d269709f2deb2d988a5f1f65e908678">Sensor::Sensor</a></div><div class="ttdeci">Sensor(int _period, uint8_t _type, SensorStrategy *_strategy)</div><div class="ttdoc">Construit un nouveau capteur.</div><div class="ttdef"><b>Definition:</b> sensor.cpp:5</div></div>
+<div class="ttc" id="aclass_sensor_html_aa343e8695fc0de4efa61923829fdedc9"><div class="ttname"><a href="class_sensor.html#aa343e8695fc0de4efa61923829fdedc9">Sensor::decrementPeriod</a></div><div class="ttdeci">int decrementPeriod(int value)</div><div class="ttdoc">Reduit le temps avant le prochain reveil.</div><div class="ttdef"><b>Definition:</b> sensor.cpp:42</div></div>
+<div class="ttc" id="aclass_sensor_html_aeb0d54ff81b349abb3a16d9eaf79f479"><div class="ttname"><a href="class_sensor.html#aeb0d54ff81b349abb3a16d9eaf79f479">Sensor::init</a></div><div class="ttdeci">int init()</div><div class="ttdoc">Initialise le capteur.</div><div class="ttdef"><b>Definition:</b> sensor.cpp:32</div></div>
+<div class="ttc" id="aclass_sensor_strategy_html"><div class="ttname"><a href="class_sensor_strategy.html">SensorStrategy</a></div><div class="ttdoc">Represente la strategie d'un capteur.</div><div class="ttdef"><b>Definition:</b> sensorstrategy.h:9</div></div>
+<div class="ttc" id="aclass_sensor_html_a507168d6052e63925653a308f259cc10"><div class="ttname"><a href="class_sensor.html#a507168d6052e63925653a308f259cc10">Sensor::wakeUp</a></div><div class="ttdeci">int wakeUp()</div><div class="ttdoc">Reveil le capteur.</div><div class="ttdef"><b>Definition:</b> sensor.cpp:24</div></div>
+<div class="ttc" id="aclass_sensor_strategy_html_ad78fb4b5239c43ac4d3770eb9f175959"><div class="ttname"><a href="class_sensor_strategy.html#ad78fb4b5239c43ac4d3770eb9f175959">SensorStrategy::init</a></div><div class="ttdeci">virtual int init()=0</div><div class="ttdoc">Initialisation de la strategie.</div></div>
+<div class="ttc" id="aclass_sensor_html_afcfbd1fe551c75285004556c8a1da356"><div class="ttname"><a href="class_sensor.html#afcfbd1fe551c75285004556c8a1da356">Sensor::getType</a></div><div class="ttdeci">int getType() const</div><div class="ttdoc">Recupere le type du capteur, correspond a un define.</div><div class="ttdef"><b>Definition:</b> sensor.cpp:37</div></div>
+<div class="ttc" id="aclass_sensor_strategy_html_a7489fcebeb57cebd81b48c1b0ab69fb2"><div class="ttname"><a href="class_sensor_strategy.html#a7489fcebeb57cebd81b48c1b0ab69fb2">SensorStrategy::wakeUp</a></div><div class="ttdeci">virtual int wakeUp()=0</div><div class="ttdoc">Reveil du capteur.</div></div>
+<div class="ttc" id="aclass_sensor_html_aa04e6d8cbdde8fcf23486129f90b9fe8"><div class="ttname"><a href="class_sensor.html#aa04e6d8cbdde8fcf23486129f90b9fe8">Sensor::getMesure</a></div><div class="ttdeci">int getMesure()</div><div class="ttdoc">Recupere la mesure du capteur.</div><div class="ttdef"><b>Definition:</b> sensor.cpp:20</div></div>
+<div class="ttc" id="aclass_sensor_html_a96845aa794e3658f348c5bc2297929bb"><div class="ttname"><a href="class_sensor.html#a96845aa794e3658f348c5bc2297929bb">Sensor::getPeriodLeft</a></div><div class="ttdeci">int getPeriodLeft() const</div><div class="ttdoc">Recupere la valeur du temps avant le prochain reveil.</div><div class="ttdef"><b>Definition:</b> sensor.cpp:15</div></div>
+<div class="ttc" id="aclass_sensor_html"><div class="ttname"><a href="class_sensor.html">Sensor</a></div><div class="ttdoc">Represente un capteur.</div><div class="ttdef"><b>Definition:</b> sensor.h:10</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

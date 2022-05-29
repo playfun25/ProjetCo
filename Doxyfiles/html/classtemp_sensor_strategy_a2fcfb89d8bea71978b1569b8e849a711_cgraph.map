@@ -1,0 +1,5 @@
+<map id="tempSensorStrategy::getMesure" name="tempSensorStrategy::getMesure">
+<area shape="rect" id="node1" title="Recupere la mesure du capteur physique." alt="" coords="5,27,160,69"/>
+<area shape="rect" id="node2" href="$class_sensors_last_value.html#a69d7bedcb9e16e3cc08d103e8ef8dadf" title="Recupere l&#39;unique instance." alt="" coords="208,5,431,32"/>
+<area shape="rect" id="node3" href="$class_sensors_last_value.html#a832f91e899f9e8684831c0d824487d7e" title="Fixe la valeur de la temperature." alt="" coords="220,57,419,98"/>
+</map>

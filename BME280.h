@@ -48,7 +48,7 @@ extern Serial pc;
 #else
 #define DEBUG_PRINT(...)
 #endif
-
+extern I2C i2c;
 /**  Interface for controlling BME280 Combined humidity and pressure sensor
  *
  * @code
@@ -83,33 +83,20 @@ class BME280
 {
 public:
 
-    /** Create a BME280 instance
-     *  which is connected to specified I2C pins with specified address
-     *
-     * @param sda I2C-bus SDA pin
-     * @param scl I2C-bus SCL pin
-     * @param slave_adr (option) I2C-bus address (default: 0x76)
-     */
-    BME280(PinName sda, PinName sck, char slave_adr = DEFAULT_SLAVE_ADDRESS);
+    
+    BME280( char slave_adr = DEFAULT_SLAVE_ADDRESS);
 
-    /** Create a BME280 instance
-     *  which is connected to specified I2C pins with specified address
-     *
-     * @param i2c_obj I2C object (instance)
-     * @param slave_adr (option) I2C-bus address (default: 0x76)
-     */
-    BME280(I2C &i2c_obj, char slave_adr = DEFAULT_SLAVE_ADDRESS);
 
     /** Destructor of BME280
      */
-    virtual ~BME280();
+    virtual ~BME280(){};
 
     /** Initializa BME280 sensor
      *
      *  Configure sensor setting and read parameters for calibration
      *
      */
-    void initialize(void);
+    int initialize(void);
 
     /** Set the mode to forced to make only one measurment and go to sleep
      *
@@ -141,8 +128,6 @@ public:
 
 private:
 
-    I2C         *i2c_p;
-    I2C         &i2c;
     char        address;
     uint16_t    dig_T1;
     int16_t     dig_T2, dig_T3;
@@ -155,4 +140,3 @@ private:
 };
 
 #endif // MBED_BME280_H
-

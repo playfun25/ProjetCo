@@ -1,0 +1,147 @@
+\hypertarget{class_lux_sensor_strategy}{}\doxysection{Référence de la classe Lux\+Sensor\+Strategy}
+\label{class_lux_sensor_strategy}\index{LuxSensorStrategy@{LuxSensorStrategy}}
+
+
+Strategie des capteurs de luminosite.  
+
+
+
+
+{\ttfamily \#include $<$luxsensorstrategy.\+h$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de Lux\+Sensor\+Strategy\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{class_lux_sensor_strategy__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de Lux\+Sensor\+Strategy\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{class_lux_sensor_strategy__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lux_sensor_strategy_a80654faa273bdedff781c41ee93df8db}{Lux\+Sensor\+Strategy}} ()
+\begin{DoxyCompactList}\small\item\em Construit la strategie. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_lux_sensor_strategy_abebbd7474d8593bca009e40ecf431324}{get\+Mesure}} () override
+\begin{DoxyCompactList}\small\item\em Recupere la mesure du capteur physique. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_lux_sensor_strategy_a4ee67e5525cef198ff3c2c6cc9de0926}{wake\+Up}} () override
+\begin{DoxyCompactList}\small\item\em Reveil le capteur physique. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_lux_sensor_strategy_af2945f0a98ba7c5762830b1b6b967271}{init}} () override
+\begin{DoxyCompactList}\small\item\em Initialise le capteur physique. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_lux_sensor_strategy_ab239ae179f747542b4f109add776a0a5}{low\+Power}} () override
+\begin{DoxyCompactList}\small\item\em Met le capteur physique en mode basse consomation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Strategie des capteurs de luminosite. 
+
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_lux_sensor_strategy_a80654faa273bdedff781c41ee93df8db}\label{class_lux_sensor_strategy_a80654faa273bdedff781c41ee93df8db}} 
+\index{LuxSensorStrategy@{LuxSensorStrategy}!LuxSensorStrategy@{LuxSensorStrategy}}
+\index{LuxSensorStrategy@{LuxSensorStrategy}!LuxSensorStrategy@{LuxSensorStrategy}}
+\doxysubsubsection{\texorpdfstring{LuxSensorStrategy()}{LuxSensorStrategy()}}
+{\footnotesize\ttfamily Lux\+Sensor\+Strategy\+::\+Lux\+Sensor\+Strategy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construit la strategie. 
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_lux_sensor_strategy_abebbd7474d8593bca009e40ecf431324}\label{class_lux_sensor_strategy_abebbd7474d8593bca009e40ecf431324}} 
+\index{LuxSensorStrategy@{LuxSensorStrategy}!getMesure@{getMesure}}
+\index{getMesure@{getMesure}!LuxSensorStrategy@{LuxSensorStrategy}}
+\doxysubsubsection{\texorpdfstring{getMesure()}{getMesure()}}
+{\footnotesize\ttfamily int Lux\+Sensor\+Strategy\+::get\+Mesure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Recupere la mesure du capteur physique. 
+
+\begin{DoxyReturn}{Renvoie}
+int retourne la mesure du capteur 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{class_sensor_strategy_ac51565a8d0f5c1a4ae67a04a2840aa6b}{Sensor\+Strategy}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_lux_sensor_strategy_abebbd7474d8593bca009e40ecf431324_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_lux_sensor_strategy_af2945f0a98ba7c5762830b1b6b967271}\label{class_lux_sensor_strategy_af2945f0a98ba7c5762830b1b6b967271}} 
+\index{LuxSensorStrategy@{LuxSensorStrategy}!init@{init}}
+\index{init@{init}!LuxSensorStrategy@{LuxSensorStrategy}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily int Lux\+Sensor\+Strategy\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initialise le capteur physique. 
+
+\begin{DoxyReturn}{Renvoie}
+retourne 0 si tout c\textquotesingle{}est bien passe, retourne le code erreur du capteur sinon 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{class_sensor_strategy_ad78fb4b5239c43ac4d3770eb9f175959}{Sensor\+Strategy}}.
+
+\mbox{\Hypertarget{class_lux_sensor_strategy_ab239ae179f747542b4f109add776a0a5}\label{class_lux_sensor_strategy_ab239ae179f747542b4f109add776a0a5}} 
+\index{LuxSensorStrategy@{LuxSensorStrategy}!lowPower@{lowPower}}
+\index{lowPower@{lowPower}!LuxSensorStrategy@{LuxSensorStrategy}}
+\doxysubsubsection{\texorpdfstring{lowPower()}{lowPower()}}
+{\footnotesize\ttfamily int Lux\+Sensor\+Strategy\+::low\+Power (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Met le capteur physique en mode basse consomation. 
+
+\begin{DoxyReturn}{Renvoie}
+retourne 0 si tout c\textquotesingle{}est bien passe, retourne le code erreur du capteur sinon 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{class_sensor_strategy_ad7f1a478c7bccfc9282c38db335033e9}{Sensor\+Strategy}}.
+
+\mbox{\Hypertarget{class_lux_sensor_strategy_a4ee67e5525cef198ff3c2c6cc9de0926}\label{class_lux_sensor_strategy_a4ee67e5525cef198ff3c2c6cc9de0926}} 
+\index{LuxSensorStrategy@{LuxSensorStrategy}!wakeUp@{wakeUp}}
+\index{wakeUp@{wakeUp}!LuxSensorStrategy@{LuxSensorStrategy}}
+\doxysubsubsection{\texorpdfstring{wakeUp()}{wakeUp()}}
+{\footnotesize\ttfamily int Lux\+Sensor\+Strategy\+::wake\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reveil le capteur physique. 
+
+\begin{DoxyReturn}{Renvoie}
+int retourne 0 si tout c\textquotesingle{}est bien passe, retourne le code erreur du capteur sinon 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{class_sensor_strategy_a7489fcebeb57cebd81b48c1b0ab69fb2}{Sensor\+Strategy}}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/teddy/\+Mbed Programs/\+Projet\+Co/luxsensorstrategy.\+h\item 
+/home/teddy/\+Mbed Programs/\+Projet\+Co/luxsensorstrategy.\+cpp\end{DoxyCompactItemize}
