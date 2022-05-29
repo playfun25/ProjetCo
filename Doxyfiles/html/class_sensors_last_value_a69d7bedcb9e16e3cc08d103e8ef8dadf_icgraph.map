@@ -1,0 +1,8 @@
+<map id="SensorsLastValue::GetInstance" name="SensorsLastValue::GetInstance">
+<area shape="rect" id="node1" title="Recupere l&#39;unique instance." alt="" coords="217,143,440,170"/>
+<area shape="rect" id="node2" href="$class_humid_sensor_strategy.html#a9767f7c7f7906f1162a8543de3505181" title="Recupere la mesure du capteur physique." alt="" coords="5,5,169,47"/>
+<area shape="rect" id="node3" href="$classtemp_sensor_strategy.html#a2fcfb89d8bea71978b1569b8e849a711" title="Recupere la mesure du capteur physique." alt="" coords="10,71,165,112"/>
+<area shape="rect" id="node4" href="$class_press_sensor_strategy.html#ae99e904b91f41379ba96fce0ed5f2fa6" title="Recupere la mesure du capteur physique." alt="" coords="9,136,165,177"/>
+<area shape="rect" id="node5" href="$class_lux_sensor_strategy.html#abebbd7474d8593bca009e40ecf431324" title="Recupere la mesure du capteur physique." alt="" coords="12,201,163,243"/>
+<area shape="rect" id="node6" href="$class_co2_sensor_strategy.html#a2101ea4dd373ea8b56b4d170404eccb5" title="Recupere la mesure du capteur physique." alt="" coords="11,267,164,308"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Sensor::getMesure" name="Sensor::getMesure">
+<area shape="rect" id="node1" title="Recupere la mesure du capteur." alt="" coords="5,5,148,32"/>
+<area shape="rect" id="node2" href="$class_sensor_strategy.html#ac51565a8d0f5c1a4ae67a04a2840aa6b" title="Recupere la mesure." alt="" coords="196,5,393,32"/>
+</map>

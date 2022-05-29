@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SmartOme:  Fichier source de /home/teddy/Mbed Programs/ProjetCo/presssensorstrategy.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SmartOme
+   &#160;<span id="projectnumber">0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">/home/teddy/Mbed Programs/ProjetCo/presssensorstrategy.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;sensorstrategy.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_press_sensor_strategy.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_press_sensor_strategy.html">PressSensorStrategy</a> :  <span class="keyword">public</span> <a class="code" href="class_sensor_strategy.html">SensorStrategy</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_press_sensor_strategy.html#a89015e172783401f1a9dc7ef26e2c5d6">PressSensorStrategy</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_press_sensor_strategy.html#ae99e904b91f41379ba96fce0ed5f2fa6">getMesure</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_press_sensor_strategy.html#a5d53463be38149d7eda3d83b0a246a7c">wakeUp</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_press_sensor_strategy.html#affdafe1d0787dcce8dbe71f0efeefb57">init</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_press_sensor_strategy.html#ad5ddc0ad41006d8c016c09b74d29e7ef">lowPower</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_press_sensor_strategy_html_ad5ddc0ad41006d8c016c09b74d29e7ef"><div class="ttname"><a href="class_press_sensor_strategy.html#ad5ddc0ad41006d8c016c09b74d29e7ef">PressSensorStrategy::lowPower</a></div><div class="ttdeci">int lowPower() override</div><div class="ttdoc">Met le capteur physique en mode basse consomation.</div><div class="ttdef"><b>Definition:</b> presssensorstrategy.cpp:24</div></div>
+<div class="ttc" id="aclass_press_sensor_strategy_html_a5d53463be38149d7eda3d83b0a246a7c"><div class="ttname"><a href="class_press_sensor_strategy.html#a5d53463be38149d7eda3d83b0a246a7c">PressSensorStrategy::wakeUp</a></div><div class="ttdeci">int wakeUp() override</div><div class="ttdoc">Reveil le capteur physique.</div><div class="ttdef"><b>Definition:</b> presssensorstrategy.cpp:14</div></div>
+<div class="ttc" id="aclass_press_sensor_strategy_html_ae99e904b91f41379ba96fce0ed5f2fa6"><div class="ttname"><a href="class_press_sensor_strategy.html#ae99e904b91f41379ba96fce0ed5f2fa6">PressSensorStrategy::getMesure</a></div><div class="ttdeci">int getMesure() override</div><div class="ttdoc">Recupere la mesure du capteur physique.</div><div class="ttdef"><b>Definition:</b> presssensorstrategy.cpp:8</div></div>
+<div class="ttc" id="aclass_sensors_last_value_html_a69d7bedcb9e16e3cc08d103e8ef8dadf"><div class="ttname"><a href="class_sensors_last_value.html#a69d7bedcb9e16e3cc08d103e8ef8dadf">SensorsLastValue::GetInstance</a></div><div class="ttdeci">static SensorsLastValue * GetInstance()</div><div class="ttdoc">Recupere l'unique instance.</div><div class="ttdef"><b>Definition:</b> sensorslastvalue.cpp:6</div></div>
+<div class="ttc" id="aclass_press_sensor_strategy_html_a89015e172783401f1a9dc7ef26e2c5d6"><div class="ttname"><a href="class_press_sensor_strategy.html#a89015e172783401f1a9dc7ef26e2c5d6">PressSensorStrategy::PressSensorStrategy</a></div><div class="ttdeci">PressSensorStrategy()</div><div class="ttdoc">Construit la strategie.</div><div class="ttdef"><b>Definition:</b> presssensorstrategy.cpp:3</div></div>
+<div class="ttc" id="aclass_sensor_strategy_html"><div class="ttname"><a href="class_sensor_strategy.html">SensorStrategy</a></div><div class="ttdoc">Represente la strategie d'un capteur.</div><div class="ttdef"><b>Definition:</b> sensorstrategy.h:9</div></div>
+<div class="ttc" id="aclass_sensors_last_value_html_a44daa37fa9749d7efbe536838a3457b6"><div class="ttname"><a href="class_sensors_last_value.html#a44daa37fa9749d7efbe536838a3457b6">SensorsLastValue::setpressValue</a></div><div class="ttdeci">void setpressValue(float value)</div><div class="ttdoc">Fixe la valeur de la pression atmospherique.</div><div class="ttdef"><b>Definition:</b> sensorslastvalue.h:187</div></div>
+<div class="ttc" id="aclass_press_sensor_strategy_html"><div class="ttname"><a href="class_press_sensor_strategy.html">PressSensorStrategy</a></div><div class="ttdoc">Strategie des capteurs de pression atmospherique.</div><div class="ttdef"><b>Definition:</b> presssensorstrategy.h:10</div></div>
+<div class="ttc" id="aclass_press_sensor_strategy_html_affdafe1d0787dcce8dbe71f0efeefb57"><div class="ttname"><a href="class_press_sensor_strategy.html#affdafe1d0787dcce8dbe71f0efeefb57">PressSensorStrategy::init</a></div><div class="ttdeci">int init() override</div><div class="ttdoc">Initialise le capteur physique.</div><div class="ttdef"><b>Definition:</b> presssensorstrategy.cpp:19</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

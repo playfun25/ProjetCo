@@ -1,0 +1,4 @@
+<map id="LoraFrame::getFrame_str" name="LoraFrame::getFrame_str">
+<area shape="rect" id="node1" title="Recuere la trame sous le format dataType|data|dataType|data en chaine de caractere." alt="" coords="5,5,191,32"/>
+<area shape="rect" id="node2" href="$class_lora_frame.html#a5b5f814fe2c3ce653adf65fc54483d50" title="Recuere la trame sous le format dataType|data|dataType|data." alt="" coords="239,5,400,32"/>
+</map>

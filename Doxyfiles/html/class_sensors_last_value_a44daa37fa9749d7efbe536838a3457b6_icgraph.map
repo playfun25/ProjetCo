@@ -1,0 +1,4 @@
+<map id="SensorsLastValue::setpressValue" name="SensorsLastValue::setpressValue">
+<area shape="rect" id="node1" title="Fixe la valeur de la pression atmospherique." alt="" coords="209,5,408,47"/>
+<area shape="rect" id="node2" href="$class_press_sensor_strategy.html#ae99e904b91f41379ba96fce0ed5f2fa6" title="Recupere la mesure du capteur physique." alt="" coords="5,5,161,47"/>
+</map>

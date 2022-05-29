@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SmartOme:  Fichier source de /home/teddy/Mbed Programs/ProjetCo/LoraFrame.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SmartOme
+   &#160;<span id="projectnumber">0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">/home/teddy/Mbed Programs/ProjetCo/LoraFrame.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;ostream&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_lora_frame.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_lora_frame.html">LoraFrame</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        std::vector&lt;uint8_t&gt; dataType;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        std::vector&lt;float&gt; data;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="class_lora_frame.html#ac2faa7a4e1607268ac71a1ea6ce60d07">LoraFrame</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="class_lora_frame.html#a431c1f19789de7e92f47c4c2a27ab202">~LoraFrame</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        std::vector&lt;uint8_t&gt; <a class="code" href="class_lora_frame.html#a5b5f814fe2c3ce653adf65fc54483d50">getFrame</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        std::string <a class="code" href="class_lora_frame.html#aa0c48ddad915eb26eaffedc9750a26b4">getFrame_str</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_lora_frame.html#adc8f281da9907c5493ad5b228e0b07ca">addData</a>(<span class="keyword">const</span> uint8_t&amp; dataType, <span class="keyword">const</span> <span class="keywordtype">float</span>&amp; data);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_lora_frame_html_aa0c48ddad915eb26eaffedc9750a26b4"><div class="ttname"><a href="class_lora_frame.html#aa0c48ddad915eb26eaffedc9750a26b4">LoraFrame::getFrame_str</a></div><div class="ttdeci">std::string getFrame_str()</div><div class="ttdoc">Recuere la trame sous le format dataType|data|dataType|data en chaine de caractere.</div><div class="ttdef"><b>Definition:</b> LoraFrame.cpp:32</div></div>
+<div class="ttc" id="aclass_lora_frame_html_a5b5f814fe2c3ce653adf65fc54483d50"><div class="ttname"><a href="class_lora_frame.html#a5b5f814fe2c3ce653adf65fc54483d50">LoraFrame::getFrame</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; getFrame()</div><div class="ttdoc">Recuere la trame sous le format dataType|data|dataType|data.</div><div class="ttdef"><b>Definition:</b> LoraFrame.cpp:15</div></div>
+<div class="ttc" id="aclass_lora_frame_html_a431c1f19789de7e92f47c4c2a27ab202"><div class="ttname"><a href="class_lora_frame.html#a431c1f19789de7e92f47c4c2a27ab202">LoraFrame::~LoraFrame</a></div><div class="ttdeci">virtual ~LoraFrame()</div><div class="ttdoc">Detruit la trame LoRa.</div><div class="ttdef"><b>Definition:</b> LoraFrame.cpp:10</div></div>
+<div class="ttc" id="aclass_lora_frame_html_adc8f281da9907c5493ad5b228e0b07ca"><div class="ttname"><a href="class_lora_frame.html#adc8f281da9907c5493ad5b228e0b07ca">LoraFrame::addData</a></div><div class="ttdeci">void addData(const uint8_t &amp;dataType, const float &amp;data)</div><div class="ttdoc">Ajout une nouvelle donnees et son type aux vecteurs.</div><div class="ttdef"><b>Definition:</b> LoraFrame.cpp:43</div></div>
+<div class="ttc" id="aclass_lora_frame_html"><div class="ttname"><a href="class_lora_frame.html">LoraFrame</a></div><div class="ttdoc">Represente une trame LoRa.</div><div class="ttdef"><b>Definition:</b> LoraFrame.hpp:14</div></div>
+<div class="ttc" id="aclass_lora_frame_html_ac2faa7a4e1607268ac71a1ea6ce60d07"><div class="ttname"><a href="class_lora_frame.html#ac2faa7a4e1607268ac71a1ea6ce60d07">LoraFrame::LoraFrame</a></div><div class="ttdeci">LoraFrame()</div><div class="ttdoc">Construit une nouvelle trame LoRa.</div><div class="ttdef"><b>Definition:</b> LoraFrame.cpp:5</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

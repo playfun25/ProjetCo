@@ -1,0 +1,4 @@
+<map id="SensorStrategy::wakeUp" name="SensorStrategy::wakeUp">
+<area shape="rect" id="node1" title="Reveil du capteur." alt="" coords="180,5,360,32"/>
+<area shape="rect" id="node2" href="$class_sensor.html#a507168d6052e63925653a308f259cc10" title="Reveil le capteur." alt="" coords="5,5,132,32"/>
+</map>

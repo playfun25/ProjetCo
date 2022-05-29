@@ -29,6 +29,17 @@ std::vector<uint8_t> LoraFrame::getFrame()
     return ret;
 }
 
+std::string LoraFrame::getFrame_str()
+{
+    std::string ret = "";
+
+    for(uint8_t t : this->getFrame()) {
+        ret.append(1,t);
+    }
+
+    return ret;
+}
+
 void LoraFrame::addData(const uint8_t& dataType, const float& data)
 {
     this->dataType.push_back(dataType);

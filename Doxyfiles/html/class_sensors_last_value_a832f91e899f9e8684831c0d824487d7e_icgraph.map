@@ -1,0 +1,4 @@
+<map id="SensorsLastValue::setTempValue" name="SensorsLastValue::setTempValue">
+<area shape="rect" id="node1" title="Fixe la valeur de la temperature." alt="" coords="208,5,407,47"/>
+<area shape="rect" id="node2" href="$classtemp_sensor_strategy.html#a2fcfb89d8bea71978b1569b8e849a711" title="Recupere la mesure du capteur physique." alt="" coords="5,5,160,47"/>
+</map>

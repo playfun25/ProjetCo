@@ -1,0 +1,4 @@
+<map id="SensorsLastValue::setCO2Value" name="SensorsLastValue::setCO2Value">
+<area shape="rect" id="node1" title="Fixe la valeur du CO2." alt="" coords="207,5,397,47"/>
+<area shape="rect" id="node2" href="$class_co2_sensor_strategy.html#a2101ea4dd373ea8b56b4d170404eccb5" title="Recupere la mesure du capteur physique." alt="" coords="5,5,159,47"/>
+</map>

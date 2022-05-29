@@ -1,0 +1,87 @@
+\hypertarget{class_sensor_manager}{}\doxysection{Référence de la classe Sensor\+Manager}
+\label{class_sensor_manager}\index{SensorManager@{SensorManager}}
+
+
+Permettant de gerer l\textquotesingle{}integralite des capteurs actifs.  
+
+
+
+
+{\ttfamily \#include $<$sensormanager.\+h$>$}
+
+
+
+Graphe de collaboration de Sensor\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{class_sensor_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sensor_manager_ac2bea3e22536f101970bd20fc72fa5d1}{Sensor\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Construit un nouveau manager de capteur. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sensor_manager_ab004cfffd145d9201318af8b335ab241}{wake\+Up}} (int time\+Passed)
+\begin{DoxyCompactList}\small\item\em Reveil. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sensor_manager_a417d032b0c680faf82b8ee2c319d2ffa}{get\+Next\+Sleep\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Recupere le prochain temps avant le reveil. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Permettant de gerer l\textquotesingle{}integralite des capteurs actifs. 
+
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_sensor_manager_ac2bea3e22536f101970bd20fc72fa5d1}\label{class_sensor_manager_ac2bea3e22536f101970bd20fc72fa5d1}} 
+\index{SensorManager@{SensorManager}!SensorManager@{SensorManager}}
+\index{SensorManager@{SensorManager}!SensorManager@{SensorManager}}
+\doxysubsubsection{\texorpdfstring{SensorManager()}{SensorManager()}}
+{\footnotesize\ttfamily Sensor\+Manager\+::\+Sensor\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construit un nouveau manager de capteur. 
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_sensor_manager_a417d032b0c680faf82b8ee2c319d2ffa}\label{class_sensor_manager_a417d032b0c680faf82b8ee2c319d2ffa}} 
+\index{SensorManager@{SensorManager}!getNextSleepTime@{getNextSleepTime}}
+\index{getNextSleepTime@{getNextSleepTime}!SensorManager@{SensorManager}}
+\doxysubsubsection{\texorpdfstring{getNextSleepTime()}{getNextSleepTime()}}
+{\footnotesize\ttfamily int Sensor\+Manager\+::get\+Next\+Sleep\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Recupere le prochain temps avant le reveil. 
+
+\begin{DoxyReturn}{Renvoie}
+int retourne le prochain temps avant le reveil en millisecondes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sensor_manager_ab004cfffd145d9201318af8b335ab241}\label{class_sensor_manager_ab004cfffd145d9201318af8b335ab241}} 
+\index{SensorManager@{SensorManager}!wakeUp@{wakeUp}}
+\index{wakeUp@{wakeUp}!SensorManager@{SensorManager}}
+\doxysubsubsection{\texorpdfstring{wakeUp()}{wakeUp()}}
+{\footnotesize\ttfamily int Sensor\+Manager\+::wake\+Up (\begin{DoxyParamCaption}\item[{int}]{time\+Passed }\end{DoxyParamCaption})}
+
+
+
+Reveil. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em time\+Passed} & Temps a decrementer en millisecondes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+int retourne 0 si tout c\textquotesingle{}est bien passe, sinon retourne la derniere erreur capteur 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/teddy/\+Mbed Programs/\+Projet\+Co/sensormanager.\+h\item 
+/home/teddy/\+Mbed Programs/\+Projet\+Co/sensormanager.\+cpp\end{DoxyCompactItemize}

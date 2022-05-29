@@ -1,0 +1,8 @@
+<map id="SensorStrategy" name="SensorStrategy">
+<area shape="rect" id="node1" title="Represente la strategie d&#39;un capteur." alt="" coords="420,5,577,141"/>
+<area shape="rect" id="node2" href="$class_co2_sensor_strategy.html" title="Strategie des capteurs de CO2." alt="" coords="5,189,176,325"/>
+<area shape="rect" id="node3" href="$class_humid_sensor_strategy.html" title="Strategie des capteurs d&#39;humidite." alt="" coords="200,189,389,325"/>
+<area shape="rect" id="node4" href="$class_lux_sensor_strategy.html" title="Strategie des capteurs de luminosite." alt="" coords="414,189,583,325"/>
+<area shape="rect" id="node5" href="$class_press_sensor_strategy.html" title="Strategie des capteurs de pression atmospherique." alt="" coords="608,189,789,325"/>
+<area shape="rect" id="node6" href="$classtemp_sensor_strategy.html" title="Strategie des capteurs de temperature." alt="" coords="814,189,994,325"/>
+</map>

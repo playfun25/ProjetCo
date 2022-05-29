@@ -1,0 +1,5 @@
+<map id="PressSensorStrategy::getMesure" name="PressSensorStrategy::getMesure">
+<area shape="rect" id="node1" title="Recupere la mesure du capteur physique." alt="" coords="5,27,161,69"/>
+<area shape="rect" id="node2" href="$class_sensors_last_value.html#a69d7bedcb9e16e3cc08d103e8ef8dadf" title="Recupere l&#39;unique instance." alt="" coords="209,5,432,32"/>
+<area shape="rect" id="node3" href="$class_sensors_last_value.html#a44daa37fa9749d7efbe536838a3457b6" title="Fixe la valeur de la pression atmospherique." alt="" coords="221,57,420,98"/>
+</map>
