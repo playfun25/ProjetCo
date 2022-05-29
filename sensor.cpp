@@ -4,17 +4,17 @@
 
 Sensor::Sensor(int _period, uint8_t _type, SensorStrategy * _strategy):period(_period),periodLeft(_period),type(_type)
 {
-    this->strategy = _strategy;
+  this->strategy = _strategy;
 }
 
 void Sensor::resetPeriod()
 {
-    this->periodLeft = this->period;
+  this->periodLeft = this->period;
 }
 
 int Sensor::getPeriodLeft() const
 {
-    return periodLeft;
+  return periodLeft;
 }
 
 int Sensor::getMesure()
@@ -36,11 +36,11 @@ int Sensor::init()
 
 int Sensor::getType() const
 {
-    return type;
+  return type;
 }
 
 int Sensor::decrementPeriod(int value)
 {
- this->periodLeft -= value;
- return this->periodLeft;
+  this->periodLeft -= value;
+  return this->periodLeft;
 }

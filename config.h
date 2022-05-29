@@ -58,6 +58,10 @@ extern DigitalOut  Alim_l3;
 #define I2C_SCL PA_12
 #define I2C_SDA PA_11
 
+#define ALIM_L1 PA_7
+#define ALIM_L2 PA_4
+#define ALIM_L3 PA_9
+
 //30 de time out secondes
 #define TIMEOUT_WATCHDOG_APP 30
 

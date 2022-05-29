@@ -1,0 +1,4 @@
+<map id="Sensor::init" name="Sensor::init">
+<area shape="rect" id="node1" title="Initialise le capteur." alt="" coords="5,5,100,32"/>
+<area shape="rect" id="node2" href="$class_sensor_strategy.html#ad78fb4b5239c43ac4d3770eb9f175959" title="Initialisation de la strategie." alt="" coords="148,5,297,32"/>
+</map>

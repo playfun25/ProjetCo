@@ -1,0 +1,4 @@
+<map id="LuxSensorStrategy" name="LuxSensorStrategy">
+<area shape="rect" id="node1" title="Strategie des capteurs de luminosite." alt="" coords="5,189,175,325"/>
+<area shape="rect" id="node2" href="$class_sensor_strategy.html" title="Represente la strategie d&#39;un capteur." alt="" coords="11,5,169,141"/>
+</map>

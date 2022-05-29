@@ -1,0 +1,4 @@
+<map id="SensorsLastValue::setHumidValue" name="SensorsLastValue::setHumidValue">
+<area shape="rect" id="node1" title="Fixe la valeur de l&#39;humidite." alt="" coords="217,5,424,47"/>
+<area shape="rect" id="node2" href="$class_humid_sensor_strategy.html#a9767f7c7f7906f1162a8543de3505181" title="Recupere la mesure du capteur physique." alt="" coords="5,5,169,47"/>
+</map>

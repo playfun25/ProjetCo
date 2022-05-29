@@ -1,0 +1,165 @@
+\hypertarget{class_sensor_strategy}{}\doxysection{Référence de la classe Sensor\+Strategy}
+\label{class_sensor_strategy}\index{SensorStrategy@{SensorStrategy}}
+
+
+Represente la strategie d\textquotesingle{}un capteur.  
+
+
+
+
+{\ttfamily \#include $<$sensorstrategy.\+h$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de Sensor\+Strategy\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_sensor_strategy__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de Sensor\+Strategy\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{class_sensor_strategy__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_sensor_strategy_a12c1ff2ac0bc1f8804cf8fa748682492}{$\sim$\+Sensor\+Strategy}} ()
+\begin{DoxyCompactList}\small\item\em Detruit la strategie. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_sensor_strategy_ac51565a8d0f5c1a4ae67a04a2840aa6b}{get\+Mesure}} ()=0
+\begin{DoxyCompactList}\small\item\em Recupere la mesure. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_sensor_strategy_ad78fb4b5239c43ac4d3770eb9f175959}{init}} ()=0
+\begin{DoxyCompactList}\small\item\em Initialisation de la strategie. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_sensor_strategy_a7489fcebeb57cebd81b48c1b0ab69fb2}{wake\+Up}} ()=0
+\begin{DoxyCompactList}\small\item\em Reveil du capteur. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_sensor_strategy_ad7f1a478c7bccfc9282c38db335033e9}{low\+Power}} ()=0
+\begin{DoxyCompactList}\small\item\em Passe en mode basse consomation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Represente la strategie d\textquotesingle{}un capteur. 
+
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_sensor_strategy_a12c1ff2ac0bc1f8804cf8fa748682492}\label{class_sensor_strategy_a12c1ff2ac0bc1f8804cf8fa748682492}} 
+\index{SensorStrategy@{SensorStrategy}!````~SensorStrategy@{$\sim$SensorStrategy}}
+\index{````~SensorStrategy@{$\sim$SensorStrategy}!SensorStrategy@{SensorStrategy}}
+\doxysubsubsection{\texorpdfstring{$\sim$SensorStrategy()}{~SensorStrategy()}}
+{\footnotesize\ttfamily virtual Sensor\+Strategy\+::$\sim$\+Sensor\+Strategy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Detruit la strategie. 
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_sensor_strategy_ac51565a8d0f5c1a4ae67a04a2840aa6b}\label{class_sensor_strategy_ac51565a8d0f5c1a4ae67a04a2840aa6b}} 
+\index{SensorStrategy@{SensorStrategy}!getMesure@{getMesure}}
+\index{getMesure@{getMesure}!SensorStrategy@{SensorStrategy}}
+\doxysubsubsection{\texorpdfstring{getMesure()}{getMesure()}}
+{\footnotesize\ttfamily virtual int Sensor\+Strategy\+::get\+Mesure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Recupere la mesure. 
+
+\begin{DoxyReturn}{Renvoie}
+int 
+\end{DoxyReturn}
+
+
+Implémenté dans \mbox{\hyperlink{class_co2_sensor_strategy_a2101ea4dd373ea8b56b4d170404eccb5}{Co2\+Sensor\+Strategy}}, \mbox{\hyperlink{class_lux_sensor_strategy_abebbd7474d8593bca009e40ecf431324}{Lux\+Sensor\+Strategy}}, \mbox{\hyperlink{class_press_sensor_strategy_ae99e904b91f41379ba96fce0ed5f2fa6}{Press\+Sensor\+Strategy}}, \mbox{\hyperlink{classtemp_sensor_strategy_a2fcfb89d8bea71978b1569b8e849a711}{temp\+Sensor\+Strategy}}, et \mbox{\hyperlink{class_humid_sensor_strategy_a9767f7c7f7906f1162a8543de3505181}{Humid\+Sensor\+Strategy}}.
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_sensor_strategy_ac51565a8d0f5c1a4ae67a04a2840aa6b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_sensor_strategy_ad78fb4b5239c43ac4d3770eb9f175959}\label{class_sensor_strategy_ad78fb4b5239c43ac4d3770eb9f175959}} 
+\index{SensorStrategy@{SensorStrategy}!init@{init}}
+\index{init@{init}!SensorStrategy@{SensorStrategy}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual int Sensor\+Strategy\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Initialisation de la strategie. 
+
+\begin{DoxyReturn}{Renvoie}
+int 
+\end{DoxyReturn}
+
+
+Implémenté dans \mbox{\hyperlink{class_co2_sensor_strategy_ac699bb54d99bbade1f5776b439127057}{Co2\+Sensor\+Strategy}}, \mbox{\hyperlink{class_lux_sensor_strategy_af2945f0a98ba7c5762830b1b6b967271}{Lux\+Sensor\+Strategy}}, \mbox{\hyperlink{class_press_sensor_strategy_affdafe1d0787dcce8dbe71f0efeefb57}{Press\+Sensor\+Strategy}}, \mbox{\hyperlink{classtemp_sensor_strategy_a7e9ad6b6d25b298e3b8cc4baed4baca3}{temp\+Sensor\+Strategy}}, et \mbox{\hyperlink{class_humid_sensor_strategy_af6cfe4c8dfbb0eb15cc4d8cad1749083}{Humid\+Sensor\+Strategy}}.
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{class_sensor_strategy_ad78fb4b5239c43ac4d3770eb9f175959_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_sensor_strategy_ad7f1a478c7bccfc9282c38db335033e9}\label{class_sensor_strategy_ad7f1a478c7bccfc9282c38db335033e9}} 
+\index{SensorStrategy@{SensorStrategy}!lowPower@{lowPower}}
+\index{lowPower@{lowPower}!SensorStrategy@{SensorStrategy}}
+\doxysubsubsection{\texorpdfstring{lowPower()}{lowPower()}}
+{\footnotesize\ttfamily virtual int Sensor\+Strategy\+::low\+Power (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Passe en mode basse consomation. 
+
+\begin{DoxyReturn}{Renvoie}
+int retourne le code erreur du capteur 
+\end{DoxyReturn}
+
+
+Implémenté dans \mbox{\hyperlink{class_co2_sensor_strategy_a95ab74e92ca4768784d243aa84ae29fb}{Co2\+Sensor\+Strategy}}, \mbox{\hyperlink{class_lux_sensor_strategy_ab239ae179f747542b4f109add776a0a5}{Lux\+Sensor\+Strategy}}, \mbox{\hyperlink{class_press_sensor_strategy_ad5ddc0ad41006d8c016c09b74d29e7ef}{Press\+Sensor\+Strategy}}, \mbox{\hyperlink{classtemp_sensor_strategy_ae5003ac4fd125a43df4c564d1a4b47b0}{temp\+Sensor\+Strategy}}, et \mbox{\hyperlink{class_humid_sensor_strategy_a884682fb79fa43652d09c660806abd35}{Humid\+Sensor\+Strategy}}.
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_sensor_strategy_ad7f1a478c7bccfc9282c38db335033e9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_sensor_strategy_a7489fcebeb57cebd81b48c1b0ab69fb2}\label{class_sensor_strategy_a7489fcebeb57cebd81b48c1b0ab69fb2}} 
+\index{SensorStrategy@{SensorStrategy}!wakeUp@{wakeUp}}
+\index{wakeUp@{wakeUp}!SensorStrategy@{SensorStrategy}}
+\doxysubsubsection{\texorpdfstring{wakeUp()}{wakeUp()}}
+{\footnotesize\ttfamily virtual int Sensor\+Strategy\+::wake\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Reveil du capteur. 
+
+\begin{DoxyReturn}{Renvoie}
+int retourne le code erreur du capteur 
+\end{DoxyReturn}
+
+
+Implémenté dans \mbox{\hyperlink{class_co2_sensor_strategy_a5520a1abe0c1fd9cd2677f6708576f4b}{Co2\+Sensor\+Strategy}}, \mbox{\hyperlink{class_lux_sensor_strategy_a4ee67e5525cef198ff3c2c6cc9de0926}{Lux\+Sensor\+Strategy}}, \mbox{\hyperlink{class_press_sensor_strategy_a5d53463be38149d7eda3d83b0a246a7c}{Press\+Sensor\+Strategy}}, \mbox{\hyperlink{classtemp_sensor_strategy_ae79d9f6830763f448404d82819cd688c}{temp\+Sensor\+Strategy}}, et \mbox{\hyperlink{class_humid_sensor_strategy_a041421423ba567dbb9634555d6e28855}{Humid\+Sensor\+Strategy}}.
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{class_sensor_strategy_a7489fcebeb57cebd81b48c1b0ab69fb2_icgraph}
+\end{center}
+\end{figure}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+/home/teddy/\+Mbed Programs/\+Projet\+Co/sensorstrategy.\+h\end{DoxyCompactItemize}

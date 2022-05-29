@@ -1,0 +1,147 @@
+\hypertarget{classtemp_sensor_strategy}{}\doxysection{Référence de la classe temp\+Sensor\+Strategy}
+\label{classtemp_sensor_strategy}\index{tempSensorStrategy@{tempSensorStrategy}}
+
+
+Strategie des capteurs de temperature.  
+
+
+
+
+{\ttfamily \#include $<$tempsensorstrategy.\+h$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de temp\+Sensor\+Strategy\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classtemp_sensor_strategy__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de temp\+Sensor\+Strategy\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classtemp_sensor_strategy__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtemp_sensor_strategy_adb1493381a08ce5636c5f673f8775a68}{temp\+Sensor\+Strategy}} ()
+\begin{DoxyCompactList}\small\item\em Construit la strategie. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classtemp_sensor_strategy_a2fcfb89d8bea71978b1569b8e849a711}{get\+Mesure}} () override
+\begin{DoxyCompactList}\small\item\em Recupere la mesure du capteur physique. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classtemp_sensor_strategy_ae79d9f6830763f448404d82819cd688c}{wake\+Up}} () override
+\begin{DoxyCompactList}\small\item\em Reveil le capteur physique. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classtemp_sensor_strategy_a7e9ad6b6d25b298e3b8cc4baed4baca3}{init}} () override
+\begin{DoxyCompactList}\small\item\em Initialise le capteur physique. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classtemp_sensor_strategy_ae5003ac4fd125a43df4c564d1a4b47b0}{low\+Power}} () override
+\begin{DoxyCompactList}\small\item\em Met le capteur physique en mode basse consomation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Strategie des capteurs de temperature. 
+
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{classtemp_sensor_strategy_adb1493381a08ce5636c5f673f8775a68}\label{classtemp_sensor_strategy_adb1493381a08ce5636c5f673f8775a68}} 
+\index{tempSensorStrategy@{tempSensorStrategy}!tempSensorStrategy@{tempSensorStrategy}}
+\index{tempSensorStrategy@{tempSensorStrategy}!tempSensorStrategy@{tempSensorStrategy}}
+\doxysubsubsection{\texorpdfstring{tempSensorStrategy()}{tempSensorStrategy()}}
+{\footnotesize\ttfamily temp\+Sensor\+Strategy\+::temp\+Sensor\+Strategy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construit la strategie. 
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{classtemp_sensor_strategy_a2fcfb89d8bea71978b1569b8e849a711}\label{classtemp_sensor_strategy_a2fcfb89d8bea71978b1569b8e849a711}} 
+\index{tempSensorStrategy@{tempSensorStrategy}!getMesure@{getMesure}}
+\index{getMesure@{getMesure}!tempSensorStrategy@{tempSensorStrategy}}
+\doxysubsubsection{\texorpdfstring{getMesure()}{getMesure()}}
+{\footnotesize\ttfamily int temp\+Sensor\+Strategy\+::get\+Mesure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Recupere la mesure du capteur physique. 
+
+\begin{DoxyReturn}{Renvoie}
+int retourne la mesure du capteur 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{class_sensor_strategy_ac51565a8d0f5c1a4ae67a04a2840aa6b}{Sensor\+Strategy}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtemp_sensor_strategy_a2fcfb89d8bea71978b1569b8e849a711_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classtemp_sensor_strategy_a7e9ad6b6d25b298e3b8cc4baed4baca3}\label{classtemp_sensor_strategy_a7e9ad6b6d25b298e3b8cc4baed4baca3}} 
+\index{tempSensorStrategy@{tempSensorStrategy}!init@{init}}
+\index{init@{init}!tempSensorStrategy@{tempSensorStrategy}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily int temp\+Sensor\+Strategy\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initialise le capteur physique. 
+
+\begin{DoxyReturn}{Renvoie}
+retourne 0 si tout c\textquotesingle{}est bien passe, retourne le code erreur du capteur sinon 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{class_sensor_strategy_ad78fb4b5239c43ac4d3770eb9f175959}{Sensor\+Strategy}}.
+
+\mbox{\Hypertarget{classtemp_sensor_strategy_ae5003ac4fd125a43df4c564d1a4b47b0}\label{classtemp_sensor_strategy_ae5003ac4fd125a43df4c564d1a4b47b0}} 
+\index{tempSensorStrategy@{tempSensorStrategy}!lowPower@{lowPower}}
+\index{lowPower@{lowPower}!tempSensorStrategy@{tempSensorStrategy}}
+\doxysubsubsection{\texorpdfstring{lowPower()}{lowPower()}}
+{\footnotesize\ttfamily int temp\+Sensor\+Strategy\+::low\+Power (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Met le capteur physique en mode basse consomation. 
+
+\begin{DoxyReturn}{Renvoie}
+retourne 0 si tout c\textquotesingle{}est bien passe, retourne le code erreur du capteur sinon 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{class_sensor_strategy_ad7f1a478c7bccfc9282c38db335033e9}{Sensor\+Strategy}}.
+
+\mbox{\Hypertarget{classtemp_sensor_strategy_ae79d9f6830763f448404d82819cd688c}\label{classtemp_sensor_strategy_ae79d9f6830763f448404d82819cd688c}} 
+\index{tempSensorStrategy@{tempSensorStrategy}!wakeUp@{wakeUp}}
+\index{wakeUp@{wakeUp}!tempSensorStrategy@{tempSensorStrategy}}
+\doxysubsubsection{\texorpdfstring{wakeUp()}{wakeUp()}}
+{\footnotesize\ttfamily int temp\+Sensor\+Strategy\+::wake\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reveil le capteur physique. 
+
+\begin{DoxyReturn}{Renvoie}
+int retourne 0 si tout c\textquotesingle{}est bien passe, retourne le code erreur du capteur sinon 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{class_sensor_strategy_a7489fcebeb57cebd81b48c1b0ab69fb2}{Sensor\+Strategy}}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/teddy/\+Mbed Programs/\+Projet\+Co/tempsensorstrategy.\+h\item 
+/home/teddy/\+Mbed Programs/\+Projet\+Co/tempsensorstrategy.\+cpp\end{DoxyCompactItemize}

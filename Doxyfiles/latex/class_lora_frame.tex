@@ -1,0 +1,127 @@
+\hypertarget{class_lora_frame}{}\doxysection{Référence de la classe Lora\+Frame}
+\label{class_lora_frame}\index{LoraFrame@{LoraFrame}}
+
+
+Represente une trame Lo\+Ra.  
+
+
+
+
+{\ttfamily \#include $<$Lora\+Frame.\+hpp$>$}
+
+
+
+Graphe de collaboration de Lora\+Frame\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{class_lora_frame__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lora_frame_ac2faa7a4e1607268ac71a1ea6ce60d07}{Lora\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em Construit une nouvelle trame Lo\+Ra. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_lora_frame_a431c1f19789de7e92f47c4c2a27ab202}{$\sim$\+Lora\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em Detruit la trame Lo\+Ra. \end{DoxyCompactList}\item 
+std\+::vector$<$ uint8\+\_\+t $>$ \mbox{\hyperlink{class_lora_frame_a5b5f814fe2c3ce653adf65fc54483d50}{get\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em Recuere la trame sous le format data\+Type$\vert$data$\vert$data\+Type$\vert$data. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_lora_frame_aa0c48ddad915eb26eaffedc9750a26b4}{get\+Frame\+\_\+str}} ()
+\begin{DoxyCompactList}\small\item\em Recuere la trame sous le format data\+Type$\vert$data$\vert$data\+Type$\vert$data en chaine de caractere. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lora_frame_adc8f281da9907c5493ad5b228e0b07ca}{add\+Data}} (const uint8\+\_\+t \&data\+Type, const float \&data)
+\begin{DoxyCompactList}\small\item\em Ajout une nouvelle donnees et son type aux vecteurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Represente une trame Lo\+Ra. 
+
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_lora_frame_ac2faa7a4e1607268ac71a1ea6ce60d07}\label{class_lora_frame_ac2faa7a4e1607268ac71a1ea6ce60d07}} 
+\index{LoraFrame@{LoraFrame}!LoraFrame@{LoraFrame}}
+\index{LoraFrame@{LoraFrame}!LoraFrame@{LoraFrame}}
+\doxysubsubsection{\texorpdfstring{LoraFrame()}{LoraFrame()}}
+{\footnotesize\ttfamily Lora\+Frame\+::\+Lora\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construit une nouvelle trame Lo\+Ra. 
+
+\mbox{\Hypertarget{class_lora_frame_a431c1f19789de7e92f47c4c2a27ab202}\label{class_lora_frame_a431c1f19789de7e92f47c4c2a27ab202}} 
+\index{LoraFrame@{LoraFrame}!````~LoraFrame@{$\sim$LoraFrame}}
+\index{````~LoraFrame@{$\sim$LoraFrame}!LoraFrame@{LoraFrame}}
+\doxysubsubsection{\texorpdfstring{$\sim$LoraFrame()}{~LoraFrame()}}
+{\footnotesize\ttfamily Lora\+Frame\+::$\sim$\+Lora\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Detruit la trame Lo\+Ra. 
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_lora_frame_adc8f281da9907c5493ad5b228e0b07ca}\label{class_lora_frame_adc8f281da9907c5493ad5b228e0b07ca}} 
+\index{LoraFrame@{LoraFrame}!addData@{addData}}
+\index{addData@{addData}!LoraFrame@{LoraFrame}}
+\doxysubsubsection{\texorpdfstring{addData()}{addData()}}
+{\footnotesize\ttfamily void Lora\+Frame\+::add\+Data (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \&}]{data\+Type,  }\item[{const float \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Ajout une nouvelle donnees et son type aux vecteurs. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em data\+Type} & le type de la nouvelle donnee \\
+\hline
+{\em data} & la nouvelle donnee \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_lora_frame_a5b5f814fe2c3ce653adf65fc54483d50}\label{class_lora_frame_a5b5f814fe2c3ce653adf65fc54483d50}} 
+\index{LoraFrame@{LoraFrame}!getFrame@{getFrame}}
+\index{getFrame@{getFrame}!LoraFrame@{LoraFrame}}
+\doxysubsubsection{\texorpdfstring{getFrame()}{getFrame()}}
+{\footnotesize\ttfamily std\+::vector$<$ uint8\+\_\+t $>$ Lora\+Frame\+::get\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Recuere la trame sous le format data\+Type$\vert$data$\vert$data\+Type$\vert$data. 
+
+\begin{DoxyReturn}{Renvoie}
+std\+::vector$<$uint8\+\_\+t$>$ retourne la trame dans un vecteur uint8\+\_\+t 
+\end{DoxyReturn}
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_lora_frame_a5b5f814fe2c3ce653adf65fc54483d50_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_lora_frame_aa0c48ddad915eb26eaffedc9750a26b4}\label{class_lora_frame_aa0c48ddad915eb26eaffedc9750a26b4}} 
+\index{LoraFrame@{LoraFrame}!getFrame\_str@{getFrame\_str}}
+\index{getFrame\_str@{getFrame\_str}!LoraFrame@{LoraFrame}}
+\doxysubsubsection{\texorpdfstring{getFrame\_str()}{getFrame\_str()}}
+{\footnotesize\ttfamily std\+::string Lora\+Frame\+::get\+Frame\+\_\+str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Recuere la trame sous le format data\+Type$\vert$data$\vert$data\+Type$\vert$data en chaine de caractere. 
+
+\begin{DoxyReturn}{Renvoie}
+std\+::string retourne la trame formate en chaine de caractere 
+\end{DoxyReturn}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_lora_frame_aa0c48ddad915eb26eaffedc9750a26b4_cgraph}
+\end{center}
+\end{figure}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/teddy/\+Mbed Programs/\+Projet\+Co/Lora\+Frame.\+hpp\item 
+/home/teddy/\+Mbed Programs/\+Projet\+Co/Lora\+Frame.\+cpp\end{DoxyCompactItemize}
