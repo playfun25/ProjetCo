@@ -5,17 +5,17 @@ extern DigitalOut  Alim_l1;
 extern DigitalOut  Alim_l2;
 extern DigitalOut  Alim_l3;
 
-//#define TEMP_SENSOR_ACTVE
+#define TEMP_SENSOR_ACTVE
 #define TEMP_SENSOR 0x01
-#define TEMP_SENSOR_PERIOD 60000
+#define TEMP_SENSOR_PERIOD 1800000
 #define TEMP_STRATEGIE tempSensorStrategy()
-//DigitalOut * TEMP_POWER_LINE = Alim_l1;
+#define TEMP_POWER_LINE Alim_l1
 
-//#define HUMID_SENSOR_ACTVE
+#define HUMID_SENSOR_ACTVE
 #define HUMID_SENSOR 0x02
-#define HUMID_SENSOR_PERIOD 2000
+#define HUMID_SENSOR_PERIOD 1800000
 #define HUMID_STRATEGIE HumidSensorStrategy()
-//DigitalOut & HUMID_POWER_LINE = Alim_l1;
+#define HUMID_POWER_LINE Alim_l1
 
 //#define LUX_SENSOR_ACTVE
 #define LUX_SENSOR 0x03
@@ -36,17 +36,17 @@ extern DigitalOut  Alim_l3;
 #define TOVC_STRATEGIE TovcSensorStrategy()
 //DigitalOut & TOVC_POWER_LINE = Alim_l1;
 
-//#define CO2_SENSOR_ACTVE
+#define CO2_SENSOR_ACTVE
 #define CO2_SENSOR 0x06
-#define CO2_SENSOR_PERIOD 5000
+#define CO2_SENSOR_PERIOD 60000
 #define CO2_STRATEGIE Co2SensorStrategy()
 //DigitalOut & CO2_POWER_LINE = Alim_l1;
 
-//#define PRESS_SENSOR_ACTVE
+#define PRESS_SENSOR_ACTVE
 #define PRESS_SENSOR 0x07
-#define PRESS_SENSOR_PERIOD 2000
+#define PRESS_SENSOR_PERIOD 3600000
 #define PRESS_STRATEGIE PressSensorStrategy()
-//DigitalOut & PRESS_POWER_LINE = Alim_l1;
+#define PRESS_POWER_LINE Alim_l1
 
 //#define UV_SENSOR_ACTVE
 #define UV_SENSOR 0x08
