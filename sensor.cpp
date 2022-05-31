@@ -2,7 +2,7 @@
 
 
 
-Sensor::Sensor(int _period, uint8_t _type, SensorStrategy * _strategy):period(_period),periodLeft(_period),type(_type)
+Sensor::Sensor(int _period, uint8_t _type, SensorStrategy * _strategy):period(_period),periodLeft(0),type(_type)
 {
   this->strategy = _strategy;
 }
